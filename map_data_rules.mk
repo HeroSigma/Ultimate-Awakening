@@ -24,16 +24,16 @@ MAP_JSONS := $(patsubst $(MAPS_DIR)/%/,$(MAPS_DIR)/%/map.json,$(MAP_DIRS))
 # --include-region=REGION_XXX arguments for mapjson.
 OW_CONFIG := include/config/overworld.h
 MAPJSON_REGION_FLAGS :=
-ifneq (,$(shell grep -E '^\s*#define\s+FRLG_INCLUDE_KANTO_TILESETS\s+TRUE' $(OW_CONFIG)))
+ifneq (,$(shell grep -E '^\s*#define\s+FRLG_INCLUDE_KANTO_TILESETS\s+[1-9]' $(OW_CONFIG)))
   MAPJSON_REGION_FLAGS += --include-region=REGION_KANTO
 endif
-ifneq (,$(shell grep -E '^\s*#define\s+FRLG_INCLUDE_HOENN_TILESETS\s+TRUE' $(OW_CONFIG)))
+ifneq (,$(shell grep -E '^\s*#define\s+FRLG_INCLUDE_HOENN_TILESETS\s+[1-9]' $(OW_CONFIG)))
   MAPJSON_REGION_FLAGS += --include-region=REGION_HOENN
 endif
-ifneq (,$(shell grep -E '^\s*#define\s+JOHTO_INCLUDE_TILESETS\s+TRUE' $(OW_CONFIG)))
+ifneq (,$(shell grep -E '^\s*#define\s+JOHTO_INCLUDE_TILESETS\s+[1-9]' $(OW_CONFIG)))
   MAPJSON_REGION_FLAGS += --include-region=REGION_JOHTO
 endif
-ifneq (,$(shell grep -E '^\s*#define\s+SINNOH_INCLUDE_TILESETS\s+TRUE' $(OW_CONFIG)))
+ifneq (,$(shell grep -E '^\s*#define\s+SINNOH_INCLUDE_TILESETS\s+[1-9]' $(OW_CONFIG)))
   MAPJSON_REGION_FLAGS += --include-region=REGION_SINNOH
 endif
 
@@ -46,11 +46,11 @@ $(MAPS_OUTDIR)/%/header.inc $(MAPS_OUTDIR)/%/events.inc $(MAPS_OUTDIR)/%/connect
 	$(MAPJSON) map emerald $(MAPJSON_REGION_FLAGS) $< $(LAYOUTS_DIR)/layouts.json $(@D)
 
 
-$(MAPS_OUTDIR)/connections.inc $(MAPS_OUTDIR)/groups.inc $(MAPS_OUTDIR)/events.inc $(MAPS_OUTDIR)/headers.inc $(INCLUDECONSTS_OUTDIR)/map_groups.h $(DATA_SRC_SUBDIR)/map_group_count.h: $(MAPS_DIR)/map_groups.json $(MAP_JSONS) .map_version
-	@$(MAPJSON) groups $(MAP_VERSION) $(MAPJSON_REGION_FLAGS) $(filter-out .map_version,$^) $(MAPS_OUTDIR) $(INCLUDECONSTS_OUTDIR)
+$(MAPS_OUTDIR)/connections.inc $(MAPS_OUTDIR)/groups.inc $(MAPS_OUTDIR)/events.inc $(MAPS_OUTDIR)/headers.inc $(INCLUDECONSTS_OUTDIR)/map_groups.h $(DATA_SRC_SUBDIR)/map_group_count.h: $(MAPS_DIR)/map_groups.json $(MAP_JSONS) .map_version $(OW_CONFIG)
+	@$(MAPJSON) groups $(MAP_VERSION) $(MAPJSON_REGION_FLAGS) $(filter-out .map_version $(OW_CONFIG),$^) $(MAPS_OUTDIR) $(INCLUDECONSTS_OUTDIR)
 	@echo "$(MAPJSON) groups $(MAP_VERSION) $(MAPJSON_REGION_FLAGS) $(MAPS_DIR)/map_groups.json <MAP_JSONS> $(MAPS_OUTDIR) $(INCLUDECONSTS_OUTDIR)"
 
-$(LAYOUTS_OUTDIR)/layouts.inc $(LAYOUTS_OUTDIR)/layouts_table.inc $(INCLUDECONSTS_OUTDIR)/layouts.h: $(LAYOUTS_DIR)/layouts.json .map_version
+$(LAYOUTS_OUTDIR)/layouts.inc $(LAYOUTS_OUTDIR)/layouts_table.inc $(INCLUDECONSTS_OUTDIR)/layouts.h: $(LAYOUTS_DIR)/layouts.json .map_version $(OW_CONFIG)
 	$(MAPJSON) layouts $(MAP_VERSION) $(MAPJSON_REGION_FLAGS) $< $(LAYOUTS_OUTDIR) $(INCLUDECONSTS_OUTDIR)
 
 # Generate constants for map events, which depend on data that's distributed across the map.json files.

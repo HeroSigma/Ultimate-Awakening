@@ -17,10 +17,13 @@
 // Multi-region tileset inclusion
 // These allow tilesets from both Hoenn and Kanto/FRLG to be compiled into the same ROM,
 // enabling runtime cross-region warping without changing the active IS_FRLG build target.
-#define FRLG_INCLUDE_KANTO_TILESETS  FALSE  // Include Kanto/FRLG tilesets in Emerald builds (required for Hoenn→Kanto warps)
-#define FRLG_INCLUDE_HOENN_TILESETS  FALSE  // Include Hoenn tilesets in FRLG builds (required for Kanto→Hoenn warps)
-#define JOHTO_INCLUDE_TILESETS       FALSE  // Include Johto primary tilesets (placeholder; replace assets before enabling)
-#define SINNOH_INCLUDE_TILESETS      FALSE  // Include Sinnoh primary tilesets (placeholder; replace assets before enabling)
+// NOTE: These use 1/0 (not TRUE/FALSE) because they are checked in constants/flags.h which
+// runs through the assembly C preprocessor where TRUE is not yet defined.
+#define FRLG_INCLUDE_KANTO_TILESETS  1  // Include Kanto/FRLG tilesets in Emerald builds (required for Hoenn→Kanto warps)
+#define FRLG_INCLUDE_HOENN_TILESETS  0  // Include Hoenn tilesets in FRLG builds (required for Kanto→Hoenn warps)
+#define FRLG_INCLUDE_OBJECT_EVENTS   1  // Include FRLG-exclusive NPC sprites in Emerald builds (required when Kanto maps are loaded)
+#define JOHTO_INCLUDE_TILESETS       0  // Include Johto primary tilesets (placeholder; replace assets before enabling)
+#define SINNOH_INCLUDE_TILESETS      0  // Include Sinnoh primary tilesets (placeholder; replace assets before enabling)
 
 // Item Obtain Description Box
 #define OW_ITEM_DESCRIPTIONS_OFF        0   // never show descriptions

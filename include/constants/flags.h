@@ -46,9 +46,7 @@
 #define NUM_TEMP_FLAGS   (TEMP_FLAGS_END - TEMP_FLAGS_START + 1)
 
 #if IS_FRLG
-
 #include "constants/flags_frlg.h"
-
 #else
 
 #define FLAG_UNUSED_0x020    0x20 // Unused Flag
@@ -2434,7 +2432,14 @@
 #define FLAG_WORLD_MAP_SEVEN_ISLAND_SEVAULT_CANYON_TANOBY_KEY       0
 #define FLAG_WORLD_MAP_BIRTH_ISLAND_EXTERIOR                        0
 
-#endif
+#if FRLG_INCLUDE_KANTO_TILESETS
+// Kanto-specific flags used by FRLG map events in Emerald+Kanto builds.
+// Uses FLAG_KANTO_HIDDEN_ITEMS_START (0x400) to avoid clashing with
+// Emerald's hidden item range (FLAG_HIDDEN_ITEMS_START = 0x1F4).
+#include "constants/flags_kanto.h"
+#endif // FRLG_INCLUDE_KANTO_TILESETS
+
+#endif // !IS_FRLG
 
 #if TESTING
 #define TESTING_FLAGS_START                     0x5000
