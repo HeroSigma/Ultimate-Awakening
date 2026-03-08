@@ -2379,7 +2379,10 @@
 #define FLAG_SYS_GOT_BERRY_POUCH                                    0
 #define FLAG_SYS_UNLOCKED_TANOBY_RUINS                              0
 
-// World Map Flags
+#if !FRLG_INCLUDE_KANTO_TILESETS
+// World Map Flags — zero stubs for pure Emerald builds without Kanto support.
+// When FRLG_INCLUDE_KANTO_TILESETS is enabled, flags_kanto.h (included below)
+// provides real flag values so setworldmapflag and FlagGet work correctly.
 #define FLAG_WORLD_MAP_PALLET_TOWN                                  0
 #define FLAG_WORLD_MAP_VIRIDIAN_CITY                                0
 #define FLAG_WORLD_MAP_PEWTER_CITY                                  0
@@ -2431,11 +2434,13 @@
 #define FLAG_WORLD_MAP_THREE_ISLAND_DUNSPARCE_TUNNEL                0
 #define FLAG_WORLD_MAP_SEVEN_ISLAND_SEVAULT_CANYON_TANOBY_KEY       0
 #define FLAG_WORLD_MAP_BIRTH_ISLAND_EXTERIOR                        0
+#endif // !FRLG_INCLUDE_KANTO_TILESETS
 
 #if FRLG_INCLUDE_KANTO_TILESETS
 // Kanto-specific flags used by FRLG map events in Emerald+Kanto builds.
 // Uses FLAG_KANTO_HIDDEN_ITEMS_START (0x400) to avoid clashing with
 // Emerald's hidden item range (FLAG_HIDDEN_ITEMS_START = 0x1F4).
+// Also provides real FLAG_WORLD_MAP_* values (base 0x500) for fly destinations.
 #include "constants/flags_kanto.h"
 #endif // FRLG_INCLUDE_KANTO_TILESETS
 
