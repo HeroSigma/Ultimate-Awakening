@@ -237,4 +237,12 @@ const struct Trainer gTrainers[DIFFICULTY_COUNT][TRAINERS_COUNT] =
 #endif
 };
 
+#if FRLG_INCLUDE_KANTO_TILESETS && !IS_FRLG
+// Kanto (FRLG) trainer data, accessed when a trainer ID >= TRAINER_FRLG_OFFSET.
+const struct Trainer gTrainersFrlg[DIFFICULTY_COUNT][TRAINERS_COUNT_FRLG] =
+{
+#include "data/trainers_frlg.h"
+};
+#endif
+
 #include "data/text/follower_messages.h"

@@ -595,6 +595,13 @@ gStdScripts_End::
 	.include "data/maps/Route119_House/scripts.inc"
 	.include "data/maps/Route124_DivingTreasureHuntersHouse/scripts.inc"
 
+// In Emerald+Kanto builds, remap FRLG trainer constants to offset IDs (1000+)
+// so they don't collide with Emerald trainer indices. This is only for the
+// assembler pass; data.c uses the original indices for array initialization.
+#if FRLG_INCLUDE_KANTO_TILESETS && !IS_FRLG
+#include "constants/opponents_kanto.h"
+#endif
+
 .if IS_FRLG || FRLG_INCLUDE_KANTO_TILESETS
 
 @ FRLG scripts
