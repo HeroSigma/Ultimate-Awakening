@@ -1635,7 +1635,7 @@ const u16 gTilesetPalettes_UnionRoom[][16] =
 
 const u32 gTilesetTiles_UnionRoom[] = INCBIN_U32("data/tilesets/secondary/union_room/tiles.4bpp.fastSmol");
 
-#if IS_FRLG
+#if IS_FRLG || FRLG_INCLUDE_KANTO_TILESETS
 
 const u32 gTilesetTiles_Building_Frlg[] = INCBIN_U32("data/tilesets/primary/building_frlg/tiles.4bpp.smol");
 
@@ -3047,4 +3047,106 @@ const u16 ALIGNED(4) gTilesetPalettes_General_Frlg[][16] =
 
 const u32 gTilesetTiles_General_Frlg[] = INCBIN_U32("data/tilesets/primary/general_frlg/tiles.4bpp.smol");
 
-#endif // IS_FRLG
+#endif // IS_FRLG || FRLG_INCLUDE_KANTO_TILESETS
+
+// ============================================================
+// Johto tilesets (placeholder — replace with actual assets)
+// ============================================================
+#if JOHTO_INCLUDE_TILESETS
+
+const u32 gTilesetTiles_InsideBuildingJohto[] = INCBIN_U32("data/tilesets/primary/building_johto/tiles.4bpp.smol");
+
+const u16 gTilesetPalettes_InsideBuildingJohto[][16] =
+{
+    INCBIN_U16("data/tilesets/primary/building_johto/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/primary/building_johto/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/primary/building_johto/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/primary/building_johto/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/primary/building_johto/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/primary/building_johto/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/primary/building_johto/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/primary/building_johto/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/primary/building_johto/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/primary/building_johto/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/primary/building_johto/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/primary/building_johto/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/primary/building_johto/palettes/12.gbapal"),
+    INCBIN_U16("data/tilesets/primary/building_johto/palettes/13.gbapal"),
+    INCBIN_U16("data/tilesets/primary/building_johto/palettes/14.gbapal"),
+    INCBIN_U16("data/tilesets/primary/building_johto/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_General_Johto[] = INCBIN_U32("data/tilesets/primary/general_johto/tiles.4bpp.smol");
+
+const u16 gTilesetPalettes_General_Johto[][16] =
+{
+    INCBIN_U16("data/tilesets/primary/general_johto/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_johto/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_johto/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_johto/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_johto/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_johto/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_johto/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_johto/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_johto/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_johto/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_johto/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_johto/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_johto/palettes/12.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_johto/palettes/13.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_johto/palettes/14.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_johto/palettes/15.gbapal"),
+};
+
+#endif // JOHTO_INCLUDE_TILESETS
+
+// ============================================================
+// Sinnoh tilesets (placeholder — replace with actual assets)
+// ============================================================
+#if SINNOH_INCLUDE_TILESETS
+
+const u32 gTilesetTiles_InsideBuildingSinnoh[] = INCBIN_U32("data/tilesets/primary/building_sinnoh/tiles.4bpp.smol");
+
+const u16 gTilesetPalettes_InsideBuildingSinnoh[][16] =
+{
+    INCBIN_U16("data/tilesets/primary/building_sinnoh/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/primary/building_sinnoh/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/primary/building_sinnoh/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/primary/building_sinnoh/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/primary/building_sinnoh/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/primary/building_sinnoh/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/primary/building_sinnoh/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/primary/building_sinnoh/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/primary/building_sinnoh/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/primary/building_sinnoh/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/primary/building_sinnoh/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/primary/building_sinnoh/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/primary/building_sinnoh/palettes/12.gbapal"),
+    INCBIN_U16("data/tilesets/primary/building_sinnoh/palettes/13.gbapal"),
+    INCBIN_U16("data/tilesets/primary/building_sinnoh/palettes/14.gbapal"),
+    INCBIN_U16("data/tilesets/primary/building_sinnoh/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_General_Sinnoh[] = INCBIN_U32("data/tilesets/primary/general_sinnoh/tiles.4bpp.smol");
+
+const u16 gTilesetPalettes_General_Sinnoh[][16] =
+{
+    INCBIN_U16("data/tilesets/primary/general_sinnoh/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_sinnoh/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_sinnoh/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_sinnoh/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_sinnoh/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_sinnoh/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_sinnoh/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_sinnoh/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_sinnoh/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_sinnoh/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_sinnoh/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_sinnoh/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_sinnoh/palettes/12.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_sinnoh/palettes/13.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_sinnoh/palettes/14.gbapal"),
+    INCBIN_U16("data/tilesets/primary/general_sinnoh/palettes/15.gbapal"),
+};
+
+#endif // SINNOH_INCLUDE_TILESETS

@@ -14,6 +14,14 @@
 #define OW_ROCK_CLIMB_FIELD_MOVE        FALSE      // If enabled, Rock Climb can be used as a Field Move as seen in DPPt.
 #define OW_CHOOSE_FROM_PC_AND_PARTY     TRUE       // If enabled, NPCs like move tutors or trainers asking for trade will let you pick a pokemon from your PC or party instead of just your party
 
+// Multi-region tileset inclusion
+// These allow tilesets from both Hoenn and Kanto/FRLG to be compiled into the same ROM,
+// enabling runtime cross-region warping without changing the active IS_FRLG build target.
+#define FRLG_INCLUDE_KANTO_TILESETS  FALSE  // Include Kanto/FRLG tilesets in Emerald builds (required for Hoenn→Kanto warps)
+#define FRLG_INCLUDE_HOENN_TILESETS  FALSE  // Include Hoenn tilesets in FRLG builds (required for Kanto→Hoenn warps)
+#define JOHTO_INCLUDE_TILESETS       FALSE  // Include Johto primary tilesets (placeholder; replace assets before enabling)
+#define SINNOH_INCLUDE_TILESETS      FALSE  // Include Sinnoh primary tilesets (placeholder; replace assets before enabling)
+
 // Item Obtain Description Box
 #define OW_ITEM_DESCRIPTIONS_OFF        0   // never show descriptions
 #define OW_ITEM_DESCRIPTIONS_FIRST_TIME 1   // show first time (** SAVE-BREAKING - see struct SaveBlock3 **)

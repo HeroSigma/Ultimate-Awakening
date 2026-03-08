@@ -28,7 +28,7 @@ const struct Tileset gTileset_SecretBaseRedCave =
 const struct Tileset *const gTilesetPointer_SecretBase = &gTileset_SecretBase;
 const struct Tileset *const gTilesetPointer_SecretBaseRedCave = &gTileset_SecretBaseRedCave;
 
-#if !IS_FRLG
+#if !IS_FRLG || FRLG_INCLUDE_HOENN_TILESETS
 
 const struct Tileset gTileset_General =
 {
@@ -833,7 +833,9 @@ const struct Tileset gTileset_UnionRoom =
     .callback = NULL,
 };
 
-#else
+#endif // !IS_FRLG || FRLG_INCLUDE_HOENN_TILESETS
+
+#if IS_FRLG || FRLG_INCLUDE_KANTO_TILESETS
 
 // FRLG tilesets
 const struct Tileset gTileset_BuildingFrlg =
@@ -1540,4 +1542,62 @@ const struct Tileset gTileset_HallOfFame =
     .callback = NULL,
 };
 
-#endif // IS_FRLG
+#endif // IS_FRLG || FRLG_INCLUDE_KANTO_TILESETS
+
+// ============================================================
+// Johto tilesets (placeholder — replace with actual assets)
+// ============================================================
+#if JOHTO_INCLUDE_TILESETS
+
+const struct Tileset gTileset_BuildingJohto =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_InsideBuildingJohto,
+    .palettes = gTilesetPalettes_InsideBuildingJohto,
+    .metatiles = gMetatiles_InsideBuildingJohto,
+    .metatileAttributes = gMetatileAttributes_InsideBuildingJohto,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_GeneralJohto =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_General_Johto,
+    .palettes = gTilesetPalettes_General_Johto,
+    .metatiles = gMetatiles_General_Johto,
+    .metatileAttributes = gMetatileAttributes_General_Johto,
+    .callback = NULL,
+};
+
+#endif // JOHTO_INCLUDE_TILESETS
+
+// ============================================================
+// Sinnoh tilesets (placeholder — replace with actual assets)
+// ============================================================
+#if SINNOH_INCLUDE_TILESETS
+
+const struct Tileset gTileset_BuildingSinnoh =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_InsideBuildingSinnoh,
+    .palettes = gTilesetPalettes_InsideBuildingSinnoh,
+    .metatiles = gMetatiles_InsideBuildingSinnoh,
+    .metatileAttributes = gMetatileAttributes_InsideBuildingSinnoh,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_GeneralSinnoh =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_General_Sinnoh,
+    .palettes = gTilesetPalettes_General_Sinnoh,
+    .metatiles = gMetatiles_General_Sinnoh,
+    .metatileAttributes = gMetatileAttributes_General_Sinnoh,
+    .callback = NULL,
+};
+
+#endif // SINNOH_INCLUDE_TILESETS
