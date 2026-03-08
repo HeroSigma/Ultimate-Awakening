@@ -3,6 +3,9 @@
 #include "text.h"
 #include "strings.h"
 #include "union_room_chat.h"
+#include "event_data.h"
+#include "constants/regions.h"
+#include "constants/vars.h"
 
 EWRAM_DATA u8 gStringVar1[0x100] = {0};
 EWRAM_DATA u8 gStringVar2[0x100] = {0};
@@ -482,6 +485,17 @@ static const u8 *ExpandPlaceholder_RivalName(void)
 #if IS_FRLG
     if (gSaveBlock1Ptr->rivalName[0] != EOS)
         return gSaveBlock1Ptr->rivalName;
+#endif
+
+#if FRLG_INCLUDE_KANTO_TILESETS && !IS_FRLG
+    // In Emerald+Kanto builds, use FRLG rival name (Green/Red) when in Kanto region.
+    if (VarGet(VAR_CURRENT_REGION) == REGION_KANTO)
+    {
+        if (gSaveBlock2Ptr->playerGender == MALE)
+            return gText_ExpandedPlaceholder_Green;
+        else
+            return gText_ExpandedPlaceholder_Red;
+    }
 #endif
 
     if (gSaveBlock2Ptr->playerGender == MALE)
