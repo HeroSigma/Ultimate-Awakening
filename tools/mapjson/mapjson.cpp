@@ -29,11 +29,17 @@ using json11::Json;
 
 #include <regex>
 
+#include <set>
+using std::set;
+
 #include "mapjson.h"
 
 #include <filesystem>
 
 string version;
+// Regions to include in addition to the build target's native region.
+// Populated by --include-region=<REGION_XXX> CLI arguments.
+set<string> include_regions;
 // System directory separator
 string sep;
 
@@ -735,8 +741,8 @@ void process_groups(string groups_filepath, vector<string> &map_filepaths, strin
         }
         string map_name = json_to_string(map_data, "name");
 
-        if ((version == "emerald" && region != "REGION_HOENN")
-         || (version == "firered" && region != "REGION_KANTO")) {
+        if ((version == "emerald" && region != "REGION_HOENN" && include_regions.find(region) == include_regions.end())
+         || (version == "firered" && region != "REGION_KANTO" && include_regions.find(region) == include_regions.end())) {
             invalid_maps.push_back(map_name);
         }
     }
@@ -772,8 +778,14 @@ string generate_layout_headers_text(Json layouts_data) {
         if (layout_version.empty()) {
             layout_version = "emerald";
         }
-        if ((version == "emerald" && layout_version != "emerald")
-         || (version == "firered" && layout_version != "frlg"))
+        // Determine whether this layout version is included:
+        // native version always included; additional regions controlled by --include-region flags.
+        bool isNative = (version == "emerald" && layout_version == "emerald")
+                     || (version == "firered" && layout_version == "frlg");
+        bool isExtra = (layout_version == "frlg" && include_regions.find("REGION_KANTO") != include_regions.end())
+                    || (layout_version == "johto" && include_regions.find("REGION_JOHTO") != include_regions.end())
+                    || (layout_version == "sinnoh" && include_regions.find("REGION_SINNOH") != include_regions.end());
+        if (!isNative && !isExtra)
             continue;
         string layoutName = json_to_string(layout, "name");
         string border_label = layoutName + "_Border";
@@ -827,7 +839,12 @@ string generate_layouts_table_text(Json layouts_data) {
         if (layout_version.empty()) {
             layout_version = "emerald";
         }
-        if ((version == "emerald" && layout_version != "emerald") || (version == "firered" && layout_version != "frlg")) {
+        bool isNative2 = (version == "emerald" && layout_version == "emerald")
+                      || (version == "firered" && layout_version == "frlg");
+        bool isExtra2 = (layout_version == "frlg" && include_regions.find("REGION_KANTO") != include_regions.end())
+                     || (layout_version == "johto" && include_regions.find("REGION_JOHTO") != include_regions.end())
+                     || (layout_version == "sinnoh" && include_regions.find("REGION_SINNOH") != include_regions.end());
+        if (!isNative2 && !isExtra2) {
             text << "\t.4byte NULL\n";
         } else {
             string layout_name = json_to_string(layout, "name", true);
@@ -923,6 +940,22 @@ int main(int argc, char *argv[]) {
     version = string(version_arg);
     if (version != "emerald" && version != "ruby" && version != "firered")
         FATAL_ERROR("ERROR: <game-version> must be 'emerald', 'firered', or 'ruby'.\n");
+
+    // Parse --include-region=REGION_XXX flags (can appear anywhere after argv[2])
+    {
+        const string prefix = "--include-region=";
+        for (int i = 3; i < argc; i++) {
+            string arg(argv[i]);
+            if (arg.rfind(prefix, 0) == 0) {
+                include_regions.insert(arg.substr(prefix.size()));
+                // Shift remaining args down so later positional parsing is unaffected
+                for (int j = i; j < argc - 1; j++)
+                    argv[j] = argv[j + 1];
+                argc--;
+                i--;
+            }
+        }
+    }
 
     char *mode_arg = argv[1];
     string mode(mode_arg);
