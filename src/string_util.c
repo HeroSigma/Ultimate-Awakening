@@ -5,6 +5,7 @@
 #include "union_room_chat.h"
 #include "event_data.h"
 #include "constants/regions.h"
+#include "regions.h"
 #include "constants/vars.h"
 
 EWRAM_DATA u8 gStringVar1[0x100] = {0};
@@ -541,7 +542,7 @@ static const u8 *ExpandPlaceholder_Groudon(void)
 
 static const u8 *ExpandPlaceholder_Region(void)
 {
-    if (IS_FRLG)
+    if (IS_FRLG || GetCurrentRegion() == REGION_KANTO)
         return gText_Kanto;
     else
         return gText_Hoenn;

@@ -8,13 +8,13 @@
 #include "malloc.h"
 #include "menu.h"
 #include "overworld.h"
-#include "regions.h"
 #include "palette.h"
 #include "region_map.h"
 #include "sound.h"
 #include "strings.h"
 #include "text.h"
 #include "text_window.h"
+#include "regions.h"
 #include "window.h"
 #include "constants/rgb.h"
 #include "constants/songs.h"
@@ -232,6 +232,12 @@ static void PrintRegionMapSecName(void)
 static void PrintTitleWindowText(void)
 {
     static const u8 FlyPromptText[] = _("{R_BUTTON} FLY");
+    const u8 *region;
+    if (IS_FRLG || GetCurrentRegion() == REGION_KANTO)
+        region = gText_Kanto;
+    else
+        region = gText_Hoenn;
+    u32 hoennOffset = GetStringCenterAlignXOffset(FONT_NORMAL, region, 0x38);
     u32 flyOffset = GetStringCenterAlignXOffset(FONT_NORMAL, FlyPromptText, 0x38);
 
     FillWindowPixelBuffer(WIN_TITLE, PIXEL_FILL(1));
@@ -242,14 +248,9 @@ static void PrintTitleWindowText(void)
         AddTextPrinterParameterized(WIN_TITLE, FONT_NORMAL, FlyPromptText, flyOffset, 1, 0, NULL);
         ScheduleBgCopyTilemapToVram(WIN_TITLE);
     }
-    else if (GetCurrentRegion() != REGION_KANTO)
-    {
-        u32 hoennOffset = GetStringCenterAlignXOffset(FONT_NORMAL, gText_Hoenn, 0x38);
-        AddTextPrinterParameterized(WIN_TITLE, FONT_NORMAL, gText_Hoenn, hoennOffset, 1, 0, NULL);
-        CopyWindowToVram(WIN_TITLE, COPYWIN_FULL);
-    }
     else
     {
+        AddTextPrinterParameterized(WIN_TITLE, FONT_NORMAL, region, hoennOffset, 1, 0, NULL);
         CopyWindowToVram(WIN_TITLE, COPYWIN_FULL);
     }
 }
