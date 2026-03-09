@@ -548,4 +548,17 @@
 #define FLAG_WORLD_MAP_SEVEN_ISLAND_SEVAULT_CANYON_TANOBY_KEY   (FLAG_KANTO_WORLD_MAP_START + 0x31)
 #define FLAG_WORLD_MAP_BIRTH_ISLAND_EXTERIOR                    (FLAG_KANTO_WORLD_MAP_START + 0x32)
 
+// Kanto gym badge flags — separate from Hoenn's FLAG_BADGE01_GET..08_GET so that
+// defeating a Hoenn gym never grants Kanto HM usage and vice versa.
+// Slots 0x4B2–0x4B9 are unused in the main flags.h and within FLAGS_COUNT.
+#define FLAG_KANTO_BADGE01_GET   0x4B2  // Boulder Badge  (Brock,     Pewter City)
+#define FLAG_KANTO_BADGE02_GET   0x4B3  // Cascade Badge  (Misty,     Cerulean City)
+#define FLAG_KANTO_BADGE03_GET   0x4B4  // Thunder Badge  (Lt. Surge, Vermilion City)
+#define FLAG_KANTO_BADGE04_GET   0x4B5  // Rainbow Badge  (Erika,     Celadon City)
+#define FLAG_KANTO_BADGE05_GET   0x4B6  // Soul Badge     (Koga,      Fuchsia City)
+#define FLAG_KANTO_BADGE06_GET   0x4B7  // Marsh Badge    (Sabrina,   Saffron City)
+#define FLAG_KANTO_BADGE07_GET   0x4B8  // Volcano Badge  (Blaine,    Cinnabar Island)
+#define FLAG_KANTO_BADGE08_GET   0x4B9  // Earth Badge    (Giovanni,  Viridian City)
+#define NUM_KANTO_BADGES         8
+
 #endif // GUARD_CONSTANTS_FLAGS_KANTO_H
