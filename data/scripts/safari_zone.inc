@@ -1,29 +1,15 @@
 SafariZone_EventScript_OutOfBallsMidBattle::
-#ifdef IS_FRLG
-	setvar VAR_MAP_SCENE_FUCHSIA_CITY_SAFARI_ZONE_ENTRANCE, 3
-#else
+	@ TODO Sub-Phase 3.2: runtime checkvar VAR_CURRENT_REGION for Kanto (Fuchsia) vs Hoenn path
 	setvar VAR_SAFARI_ZONE_STATE, 1
-#endif
 	special ExitSafariMode
-#ifdef IS_FRLG
-	setwarp MAP_FUCHSIA_CITY_SAFARI_ZONE_ENTRANCE, 4, 1
-#else
 	setwarp MAP_ROUTE121_SAFARI_ZONE_ENTRANCE, 2, 5
-#endif
 	end
 
 SafariZone_EventScript_Exit::
-#ifdef IS_FRLG
-	setvar VAR_MAP_SCENE_FUCHSIA_CITY_SAFARI_ZONE_ENTRANCE, 1
-#else
+	@ TODO Sub-Phase 3.2: runtime checkvar VAR_CURRENT_REGION for Kanto (Fuchsia) vs Hoenn path
 	setvar VAR_SAFARI_ZONE_STATE, 1
-#endif
 	special ExitSafariMode
-#ifdef IS_FRLG
-	warp MAP_FUCHSIA_CITY_SAFARI_ZONE_ENTRANCE, 4, 1
-#else
 	warp MAP_ROUTE121_SAFARI_ZONE_ENTRANCE, 2, 5
-#endif
 	waitstate
 	end
 
