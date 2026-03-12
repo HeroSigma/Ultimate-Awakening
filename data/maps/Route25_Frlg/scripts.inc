@@ -1,20 +1,74 @@
 Route25_Frlg_MapScripts::
 	.byte 0
 
-Route25_EventScript_SeaCottageSign::
-	msgbox Route25_Text_SeaCottageSign, MSGBOX_SIGN
+Route25_AdjustPlayer::
 	end
 
-Route25_EventScript_Man::
-	msgbox Route25_Text_AreYouHereAlone, MSGBOX_NPC
+Route25_EventScript_BillsHouseSign::
 	end
 
-Route25_Text_SeaCottageSign::
-	.string "SEA COTTAGE\n"
-	.string "BILL lives here!$"
+Route25_EventScript_Dudley::
+	end
 
-Route25_Text_AreYouHereAlone::
-	.string "Hello, are you here alone?\p"
-	.string "If you're out at CERULEAN's cape…\n"
-	.string "Well, it should be as a couple.$"
+Route25_EventScript_Ellen::
+	end
 
+Route25_EventScript_Eusine::
+	end
+
+Route25_EventScript_Joe::
+	end
+
+Route25_EventScript_Kevin::
+	end
+
+Route25_EventScript_KevinAfter::
+	end
+
+Route25_EventScript_Laura::
+	end
+
+Route25_EventScript_Lloyd::
+	end
+
+Route25_EventScript_Misty::
+	end
+
+Route25_EventScript_MistyRematch::
+	end
+
+Route25_EventScript_Pat::
+	end
+
+Route25_EventScript_SetSuicuneSceneMid::
+	end
+
+Route25_EventScript_Shannon::
+	end
+
+Route25_EventScript_Suicune::
+	end
+
+Route25_EventScript_SuicuneMerge::
+	end
+
+Route25_EventScript_SuicunePostGame::
+	end
+
+Route25_EventScript_SuicuneRan::
+	end
+
+Route25_MapScript_OnTransition::
+	end
+
+Route25_Trigger_MistyLeft::
+	end
+
+Route25_Trigger_MistyRight::
+	end
+
+Route25_Trigger_SuicuneLeft::
+	end
+
+Route25_Trigger_SuicuneRight::
+	end

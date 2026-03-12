@@ -418,6 +418,34 @@
 // #define OBJ_EVENT_GFX_MEW OBJ_EVENT_GFX_NINJA_BOY
 // #define OBJ_EVENT_GFX_LUGIA OBJ_EVENT_GFX_NINJA_BOY
 
+// HnS / Johto trainer and NPC sprite aliases (placeholder mappings for build)
+#define OBJ_EVENT_GFX_SURGE              OBJ_EVENT_GFX_LT_SURGE
+#define OBJ_EVENT_GFX_WILL               OBJ_EVENT_GFX_LORELEI
+#define OBJ_EVENT_GFX_KAREN             OBJ_EVENT_GFX_AGATHA
+#define OBJ_EVENT_GFX_SILVER             OBJ_EVENT_GFX_BLUE
+#define OBJ_EVENT_GFX_BUGSY              OBJ_EVENT_GFX_BUG_CATCHER_FRLG
+#define OBJ_EVENT_GFX_FALKNER            OBJ_EVENT_GFX_CAMPER_FRLG
+#define OBJ_EVENT_GFX_WHITNEY            OBJ_EVENT_GFX_BEAUTY_FRLG
+#define OBJ_EVENT_GFX_MORTY              OBJ_EVENT_GFX_GENTLEMAN_FRLG
+#define OBJ_EVENT_GFX_CHUCK              OBJ_EVENT_GFX_HIKER_FRLG
+#define OBJ_EVENT_GFX_JASMINE            OBJ_EVENT_GFX_LASS_FRLG
+#define OBJ_EVENT_GFX_PRYCE              OBJ_EVENT_GFX_OLD_MAN_1
+#define OBJ_EVENT_GFX_CLAIR              OBJ_EVENT_GFX_PICNICKER_FRLG
+#define OBJ_EVENT_GFX_JANINE             OBJ_EVENT_GFX_LASS_FRLG
+#define OBJ_EVENT_GFX_FIREBREATHER       OBJ_EVENT_GFX_CAMPER_FRLG
+#define OBJ_EVENT_GFX_JUGGLER            OBJ_EVENT_GFX_FAT_MAN_FRLG
+#define OBJ_EVENT_GFX_SAGE               OBJ_EVENT_GFX_GENTLEMAN_FRLG
+#define OBJ_EVENT_GFX_ENGINEER           OBJ_EVENT_GFX_CAPTAIN
+#define OBJ_EVENT_GFX_SCIENTIST_M        OBJ_EVENT_GFX_GENTLEMAN_FRLG
+#define OBJ_EVENT_GFX_SCIENTIST_F        OBJ_EVENT_GFX_WOMAN_1_FRLG
+#define OBJ_EVENT_GFX_ATTENDANT          OBJ_EVENT_GFX_WOMAN_2_FRLG
+#define OBJ_EVENT_GFX_ATTENDANT_M        OBJ_EVENT_GFX_GENTLEMAN_FRLG
+#define OBJ_EVENT_GFX_ARCHER             OBJ_EVENT_GFX_POLICEMAN
+#define OBJ_EVENT_GFX_EUSINE             OBJ_EVENT_GFX_GENTLEMAN_FRLG
+#define OBJ_EVENT_GFX_NURSE_CHANSEY      OBJ_EVENT_GFX_NURSE_FRLG
+#define OBJ_EVENT_GFX_SNORLAX_STATIC     OBJ_EVENT_GFX_SNORLAX
+#define OBJ_EVENT_GFX_TRAIN_BACK         OBJ_EVENT_GFX_CAPTAIN
+
 
 
 // NOTE: The maximum amount of object events has been expanded from 255 to 65535.
@@ -452,6 +480,10 @@
 #define OBJ_EVENT_MON_SHINY         (1u << 13)
 #define OBJ_EVENT_MON_FEMALE        (1u << 12)
 #define OBJ_EVENT_MON_SPECIES_MASK  (~(7u << 12))
+
+// HnS compatibility alias: maps reference OBJ_EVENT_GFX_MON_BASE+SPECIES_* for overworld pokemon NPCs
+// OBJ_EVENT_MON = (1u << 14) = 0x4000, but use literal for assembler compatibility
+#define OBJ_EVENT_GFX_MON_BASE 0x4000
 
 // Used to call a specific species' follower graphics. Useful for static encounters.
 #define OBJ_EVENT_GFX_SPECIES(name)                 (SPECIES_##name + OBJ_EVENT_MON)

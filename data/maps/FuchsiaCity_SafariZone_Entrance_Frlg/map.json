@@ -1,5 +1,5 @@
 {
-  "id": "MAP_FUCHSIA_CITY_SAFARI_ZONE_ENTRANCE",
+  "id": "MAP_FUCHSIA_CITY_SAFARI_ZONE_ENTRANCE_FRLG",
   "name": "FuchsiaCity_SafariZone_Entrance_Frlg",
   "layout": "LAYOUT_FUCHSIA_CITY_SAFARI_ZONE_ENTRANCE",
   "music": "MUS_RG_FUCHSIA",
@@ -57,21 +57,21 @@
       "x": 5,
       "y": 7,
       "elevation": 3,
-      "dest_map": "MAP_FUCHSIA_CITY",
+      "dest_map": "MAP_FUCHSIA_CITY_FRLG",
       "dest_warp_id": "0"
     },
     {
       "x": 4,
       "y": 7,
       "elevation": 3,
-      "dest_map": "MAP_FUCHSIA_CITY",
+      "dest_map": "MAP_FUCHSIA_CITY_FRLG",
       "dest_warp_id": "0"
     },
     {
       "x": 3,
       "y": 7,
       "elevation": 3,
-      "dest_map": "MAP_FUCHSIA_CITY",
+      "dest_map": "MAP_FUCHSIA_CITY_FRLG",
       "dest_warp_id": "0"
     }
   ],

@@ -1,10 +1,17 @@
 Route11_Frlg_MapScripts::
 	.byte 0
 
-Route11_EventScript_DiglettsCaveSign::
-	msgbox Route11_Text_DiglettsCave, MSGBOX_SIGN
+Route11_EventScript_Engineer::
 	end
 
-Route11_Text_DiglettsCave::
-	.string "DIGLETT'S CAVE$"
+Route11_EventScript_Fidel::
+	end
 
+Route11_EventScript_Herman::
+	end
+
+Route11_EventScript_Jason::
+	end
+
+Route11_EventScript_Owen::
+	end

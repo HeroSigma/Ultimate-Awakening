@@ -1,76 +1,32 @@
 Route12_Frlg_MapScripts::
-	map_script MAP_SCRIPT_ON_RESUME, Route12_OnResume
 	.byte 0
 
-Route12_OnResume::
-	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, Route12_EventScript_TryRemoveSnorlax
+Route12_EventScript_Barney::
 	end
 
-Route12_EventScript_TryRemoveSnorlax::
-	removeobject VAR_LAST_TALKED
-	return
-
-Route12_EventScript_Snorlax::
-	lock
-	faceplayer
-	goto_if_unset FLAG_GOT_POKE_FLUTE, Route12_EventScript_SnorlaxNoPokeFlute
-	msgbox Text_WantToUsePokeFlute, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, Route12_EventScript_DontUsePokeFlute
-	call EventScript_AwakenSnorlax
-	setwildbattle SPECIES_SNORLAX, 30
-	waitse
-	playmoncry SPECIES_SNORLAX, CRY_MODE_ENCOUNTER
-	delay 40
-	waitmoncry
-	setflag FLAG_HIDE_ROUTE_12_SNORLAX
-	setflag FLAG_SYS_CTRL_OBJ_DELETE
-	setflag FLAG_WOKE_UP_ROUTE_12_SNORLAX
-	dowildbattle
-	clearflag FLAG_SYS_CTRL_OBJ_DELETE
-	specialvar VAR_RESULT, GetBattleOutcome
-	goto_if_eq VAR_RESULT, B_OUTCOME_WON, Route12_EventScript_FoughtSnorlax
-	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, Route12_EventScript_FoughtSnorlax
-	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, Route12_EventScript_FoughtSnorlax
-	release
+Route12_EventScript_Calcium::
 	end
 
-Route12_EventScript_DontUsePokeFlute::
-	release
-	end
-
-Route12_EventScript_FoughtSnorlax::
-	msgbox Text_SnorlaxReturnedToMountains
-	release
-	end
-
-Route12_EventScript_SnorlaxNoPokeFlute::
-	msgbox Route12_Text_MonSprawledOutInSlumber
-	release
-	end
-
-Route12_EventScript_RouteSign::
-	msgbox Route12_Text_RouteSign, MSGBOX_SIGN
+Route12_EventScript_Elixir::
 	end
 
 Route12_EventScript_FishingSign::
-	msgbox Route12_Text_SportfishingArea, MSGBOX_SIGN
 	end
 
-Route12_Text_MonSprawledOutInSlumber::
-	.string "A POKéMON is sprawled out in\n"
-	.string "a deep and comfortable slumber.$"
+Route12_EventScript_Kyle::
+	end
 
-Text_SnorlaxReturnedToMountains::
-	.string "SNORLAX calmed down.\n"
-	.string "It gave a huge yawn…\l"
-	.string "And returned to the mountains.$"
+Route12_EventScript_Martin::
+	end
 
-Text_WantToUsePokeFlute::
-	.string "Want to use the POKé FLUTE?$"
+Route12_EventScript_NewFisher::
+	end
 
-Route12_Text_RouteSign::
-	.string "ROUTE 12 \n"
-	.string "North to LAVENDER$"
+Route12_EventScript_Sign::
+	end
 
-Route12_Text_SportfishingArea::
-	.string "SPORTFISHING AREA$"
+Route12_EventScript_Stephen::
+	end
+
+Route12_EventScript_Tentacruel::
+	end

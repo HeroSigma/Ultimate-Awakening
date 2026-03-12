@@ -92,21 +92,21 @@
       "x": 7,
       "y": 33,
       "elevation": 3,
-      "dest_map": "MAP_CINNABAR_ISLAND",
+      "dest_map": "MAP_CINNABAR_ISLAND_FRLG",
       "dest_warp_id": "0"
     },
     {
       "x": 8,
       "y": 33,
       "elevation": 3,
-      "dest_map": "MAP_CINNABAR_ISLAND",
+      "dest_map": "MAP_CINNABAR_ISLAND_FRLG",
       "dest_warp_id": "0"
     },
     {
       "x": 9,
       "y": 33,
       "elevation": 3,
-      "dest_map": "MAP_CINNABAR_ISLAND",
+      "dest_map": "MAP_CINNABAR_ISLAND_FRLG",
       "dest_warp_id": "0"
     },
     {
@@ -127,14 +127,14 @@
       "x": 34,
       "y": 33,
       "elevation": 3,
-      "dest_map": "MAP_CINNABAR_ISLAND",
+      "dest_map": "MAP_CINNABAR_ISLAND_FRLG",
       "dest_warp_id": "0"
     },
     {
       "x": 35,
       "y": 34,
       "elevation": 0,
-      "dest_map": "MAP_CINNABAR_ISLAND",
+      "dest_map": "MAP_CINNABAR_ISLAND_FRLG",
       "dest_warp_id": "0"
     },
     {

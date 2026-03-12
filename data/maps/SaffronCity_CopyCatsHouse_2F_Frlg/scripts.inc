@@ -1,0 +1,41 @@
+SaffronCity_CopyCatsHouse_2F_Frlg_MapScripts::
+	.byte 0
+
+SaffronCity_CopyCatsHouse_2F_EventScript_Copycat::
+	end
+
+SaffronCity_CopyCatsHouse_2F_EventScript_Copycat1_Female::
+	end
+
+SaffronCity_CopyCatsHouse_2F_EventScript_Copycat1_Male::
+	end
+
+SaffronCity_CopyCatsHouse_2F_EventScript_CopycatAfterDollReturned::
+	end
+
+SaffronCity_CopyCatsHouse_2F_EventScript_CopycatAfterDollReturned_Female::
+	end
+
+SaffronCity_CopyCatsHouse_2F_EventScript_CopycatAfterDollReturned_Male::
+	end
+
+SaffronCity_CopyCatsHouse_2F_EventScript_CopycatReturnDoll::
+	end
+
+SaffronCity_CopyCatsHouse_2F_EventScript_CopycatReturnedMachinePart::
+	end
+
+SaffronCity_CopyCatsHouse_2F_EventScript_CopycatReturnedMachinePart_Female::
+	end
+
+SaffronCity_CopyCatsHouse_2F_EventScript_CopycatReturnedMachinePart_Male::
+	end
+
+SaffronCity_CopyCatsHouse_2F_EventScript_Dodrio::
+	end
+
+SaffronCity_CopyCatsHouse_2F_EventScript_Dolls::
+	end
+
+SaffronCity_CopyCatsHouse_2F_OnTransition::
+	end

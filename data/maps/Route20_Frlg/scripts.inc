@@ -1,35 +1,32 @@
 Route20_Frlg_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, Route20_OnTransition
 	.byte 0
 
-Route20_OnTransition::
-	call_if_unset FLAG_STOPPED_SEAFOAM_B3F_CURRENT, Route20_EventScript_ResetSeafoamBouldersForB3F
-	call_if_unset FLAG_STOPPED_SEAFOAM_B4F_CURRENT, Route20_EventScript_ResetSeafoamBouldersForB4F
+Route20_EventScript_Cameron::
 	end
 
-Route20_EventScript_ResetSeafoamBouldersForB3F::
-	clearflag FLAG_HIDE_SEAFOAM_1F_BOULDER_1
-	clearflag FLAG_HIDE_SEAFOAM_1F_BOULDER_2
-	setflag FLAG_HIDE_SEAFOAM_B1F_BOULDER_1
-	setflag FLAG_HIDE_SEAFOAM_B1F_BOULDER_2
-	setflag FLAG_HIDE_SEAFOAM_B2F_BOULDER_1
-	setflag FLAG_HIDE_SEAFOAM_B2F_BOULDER_2
-	setflag FLAG_HIDE_SEAFOAM_B3F_BOULDER_1
-	setflag FLAG_HIDE_SEAFOAM_B3F_BOULDER_2
-	return
-
-Route20_EventScript_ResetSeafoamBouldersForB4F::
-	clearflag FLAG_HIDE_SEAFOAM_B3F_BOULDER_3
-	clearflag FLAG_HIDE_SEAFOAM_B3F_BOULDER_4
-	clearflag FLAG_HIDE_SEAFOAM_B3F_BOULDER_5
-	clearflag FLAG_HIDE_SEAFOAM_B3F_BOULDER_6
-	setflag FLAG_HIDE_SEAFOAM_B4F_BOULDER_1
-	setflag FLAG_HIDE_SEAFOAM_B4F_BOULDER_2
-	return
-
-Route20_EventScript_SeafoamIslandsSign::
-	msgbox Route20_Text_SeafoamIslands, MSGBOX_SIGN
+Route20_EventScript_Dennis::
 	end
 
-Route20_Text_SeafoamIslands::
-	.string "SEAFOAM ISLANDS$"
+Route20_EventScript_Dewgong::
+	end
+
+Route20_EventScript_GymSign::
+	end
+
+Route20_EventScript_Headlocker::
+	end
+
+Route20_EventScript_Lori::
+	end
+
+Route20_EventScript_Nicole::
+	end
+
+Route20_EventScript_SeafoamSign::
+	end
+
+Route20_EventScript_Seel::
+	end
+
+Route20_EventScript_ShellBell::
+	end

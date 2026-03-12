@@ -548,6 +548,10 @@
 
 #define MUS_ROUTE118                0x7FFF  // Map is split into 2 music sections. controlled by GetCurrLocationDefaultMusic().
 
+// HnS / Johto music aliases (placeholder mappings for build)
+#define MUS_WEATHER_KYOGRE          MUS_ABNORMAL_WEATHER  // R/S name, remapped to FRLG equivalent
+#define MUS_HG_ROUTE26              MUS_ROUTE101          // Placeholder until HG music is added
+
 #define MUS_NONE                    0xFFFF
 
 #define FIRST_PHONEME_SONG          PH_TRAP_BLEND

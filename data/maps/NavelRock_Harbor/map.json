@@ -1,5 +1,5 @@
 {
-  "id": "MAP_NAVEL_ROCK_HARBOR",
+  "id": "MAP_NAVEL_ROCK_HARBOR_FRLG",
   "name": "NavelRock_Harbor",
   "layout": "LAYOUT_ISLAND_HARBOR",
   "music": "MUS_RG_SEVII_ROUTE",
@@ -48,7 +48,7 @@
       "x": 8,
       "y": 2,
       "elevation": 0,
-      "dest_map": "MAP_NAVEL_ROCK_EXTERIOR",
+      "dest_map": "MAP_NAVEL_ROCK_EXTERIOR_FRLG",
       "dest_warp_id": "0"
     }
   ],

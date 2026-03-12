@@ -16,22 +16,22 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_ROUTE5",
+      "map": "MAP_ROUTE5_FRLG",
       "offset": 0,
       "direction": "up"
     },
     {
-      "map": "MAP_ROUTE6",
+      "map": "MAP_ROUTE6_FRLG",
       "offset": 12,
       "direction": "down"
     },
     {
-      "map": "MAP_ROUTE7",
+      "map": "MAP_ROUTE7_FRLG",
       "offset": 10,
       "direction": "left"
     },
     {
-      "map": "MAP_ROUTE8",
+      "map": "MAP_ROUTE8_FRLG",
       "offset": 10,
       "direction": "right"
     }

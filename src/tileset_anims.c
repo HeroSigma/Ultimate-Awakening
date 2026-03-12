@@ -25,6 +25,7 @@ static void _InitPrimaryTilesetAnimation(void);
 static void _InitSecondaryTilesetAnimation(void);
 static void TilesetAnim_General(u16);
 static void TilesetAnim_Building(u16);
+static void TilesetAnim_JohtoGeneral(u16);
 static void TilesetAnim_Rustboro(u16);
 static void TilesetAnim_Dewford(u16);
 static void TilesetAnim_Slateport(u16);
@@ -1430,5 +1431,24 @@ void InitTilesetAnim_CeladonGym(void)
     sSecondaryTilesetAnimCounter = 0;
     sSecondaryTilesetAnimCounterMax = 256;
     sSecondaryTilesetAnimCallback = TilesetAnim_CeladonGym;
+}
+
+void InitTilesetAnim_JohtoGeneral(void)
+{
+    sPrimaryTilesetAnimCounter = 0;
+    sPrimaryTilesetAnimCounterMax = 256;
+    sPrimaryTilesetAnimCallback = TilesetAnim_JohtoGeneral;
+}
+
+static void TilesetAnim_JohtoGeneral(u16 timer)
+{
+    if (timer % 8 == 0)
+        QueueAnimTiles_General_SandWaterEdge(timer >> 3);
+    if (timer % 16 == 1)
+        QueueAnimTiles_General_LandWaterEdge(timer >> 4);
+    if (timer % 16 == 2)
+        QueueAnimTiles_General_Flower(timer >> 4);
+    if (timer % 16 == 3)
+        QueueAnimTiles_General_Waterfall(timer / 16);
 }
 

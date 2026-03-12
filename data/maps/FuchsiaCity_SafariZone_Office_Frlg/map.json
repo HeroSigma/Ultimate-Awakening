@@ -78,21 +78,21 @@
       "x": 5,
       "y": 9,
       "elevation": 0,
-      "dest_map": "MAP_FUCHSIA_CITY",
+      "dest_map": "MAP_FUCHSIA_CITY_FRLG",
       "dest_warp_id": "3"
     },
     {
       "x": 6,
       "y": 9,
       "elevation": 0,
-      "dest_map": "MAP_FUCHSIA_CITY",
+      "dest_map": "MAP_FUCHSIA_CITY_FRLG",
       "dest_warp_id": "3"
     },
     {
       "x": 7,
       "y": 9,
       "elevation": 3,
-      "dest_map": "MAP_FUCHSIA_CITY",
+      "dest_map": "MAP_FUCHSIA_CITY_FRLG",
       "dest_warp_id": "3"
     }
   ],

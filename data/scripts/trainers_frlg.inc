@@ -970,17 +970,7 @@ Route13_EventScript_SebastianRematch::
 	msgbox Route13_Text_SebastianPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-Route13_EventScript_Perry::
-	trainerbattle_single TRAINER_BIRD_KEEPER_PERRY, Route13_Text_PerryIntro, Route13_Text_PerryDefeat
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, Route13_EventScript_PerryRematch
-	msgbox Route13_Text_PerryPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-Route13_EventScript_PerryRematch::
-	trainerbattle_rematch TRAINER_BIRD_KEEPER_PERRY, Route13_Text_PerryRematchIntro, Route13_Text_PerryDefeat
-	msgbox Route13_Text_PerryPostBattle, MSGBOX_AUTOCLOSE
-	end
+@ Route13_EventScript_Perry and PerryRematch removed - now defined in Route13_Frlg/scripts.inc (HnS migration)
 
 Route13_EventScript_Robert::
 	trainerbattle_single TRAINER_BIRD_KEEPER_ROBERT, Route13_Text_RobertIntro, Route13_Text_RobertDefeat
@@ -1114,17 +1104,7 @@ Route14_EventScript_BennyRematch::
 	msgbox Route14_Text_BennyPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-Route14_EventScript_Carter::
-	trainerbattle_single TRAINER_BIRD_KEEPER_CARTER, Route14_Text_CarterIntro, Route14_Text_CarterDefeat
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, Route14_EventScript_CarterRematch
-	msgbox Route14_Text_CarterPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-Route14_EventScript_CarterRematch::
-	trainerbattle_rematch TRAINER_BIRD_KEEPER_CARTER, Route14_Text_CarterRematchIntro, Route14_Text_CarterDefeat
-	msgbox Route14_Text_CarterPostBattle, MSGBOX_AUTOCLOSE
-	end
+@ Route14_EventScript_Carter and CarterRematch removed - now defined in Route14_Frlg/scripts.inc (HnS migration)
 
 Route14_EventScript_Mitch::
 	trainerbattle_single TRAINER_BIRD_KEEPER_MITCH, Route14_Text_MitchIntro, Route14_Text_MitchDefeat

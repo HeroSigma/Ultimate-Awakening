@@ -92,21 +92,21 @@
       "x": 3,
       "y": 9,
       "elevation": 0,
-      "dest_map": "MAP_CELADON_CITY",
+      "dest_map": "MAP_CELADON_CITY_FRLG",
       "dest_warp_id": "5"
     },
     {
       "x": 4,
       "y": 8,
       "elevation": 3,
-      "dest_map": "MAP_CELADON_CITY",
+      "dest_map": "MAP_CELADON_CITY_FRLG",
       "dest_warp_id": "5"
     },
     {
       "x": 5,
       "y": 9,
       "elevation": 0,
-      "dest_map": "MAP_CELADON_CITY",
+      "dest_map": "MAP_CELADON_CITY_FRLG",
       "dest_warp_id": "5"
     }
   ],

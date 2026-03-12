@@ -1,11 +1,14 @@
 Route6_Frlg_MapScripts::
 	.byte 0
 
-Route6_EventScript_UndergroundPathSign::
-	msgbox Route6_Text_UndergroundPathSign, MSGBOX_SIGN
+Route6_EventScript_Allan::
 	end
 
-Route6_Text_UndergroundPathSign::
-	.string "UNDERGROUND PATH\n"
-	.string "CERULEAN CITY - VERMILION CITY$"
+Route6_EventScript_Pokefan::
+	end
 
+Route6_EventScript_Rex::
+	end
+
+Route6_EventScript_Sign::
+	end

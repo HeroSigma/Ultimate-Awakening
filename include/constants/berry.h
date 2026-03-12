@@ -143,6 +143,20 @@ enum __attribute__((__packed__)) Flavor
 #define BERRY_TREE_ROUTE_123_SITRUS   88
 #define BERRY_TREE_ROUTE_123_RAWST    89
 
+// Johto berry tree IDs for multi-region support
+#define BERRY_TREE_POMEG_1            90
+#define BERRY_TREE_POMEG_2            91
+#define BERRY_TREE_HONDEW_1           92
+#define BERRY_TREE_HONDEW_2           93
+#define BERRY_TREE_QUALOT_1           94
+#define BERRY_TREE_QUALOT_2           95
+#define BERRY_TREE_TAMATO_1           96
+#define BERRY_TREE_TAMATO_2           97
+#define BERRY_TREE_GREPA_1            98
+#define BERRY_TREE_GREPA_2            99
+#define BERRY_TREE_KELPSY_1           100
+#define BERRY_TREE_KELPSY_2           101
+
 // Remainder are unused
 
 #define BERRY_TREES_COUNT 128
