@@ -2240,6 +2240,61 @@ const struct Tileset gTileset_Kanto_Building =
     .callback = NULL,
 };
 
+const struct Tileset gTileset_Johto_NorthWest =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_Johto_NorthWest,
+    .palettes = gTilesetPalettes_Johto_NorthWest,
+    .metatiles = gMetatiles_Johto_NorthWest,
+    .metatileAttributes = gMetatileAttributes_Johto_NorthWest,
+    .callback = InitTilesetAnim_JohtoGeneral,
+};
+
+const struct Tileset gTileset_Johto_South =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_Johto_South,
+    .palettes = gTilesetPalettes_Johto_South,
+    .metatiles = gMetatiles_Johto_South,
+    .metatileAttributes = gMetatileAttributes_Johto_South,
+    .callback = InitTilesetAnim_JohtoGeneral,
+};
+
+const struct Tileset gTileset_Kanto_General =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_Kanto_General,
+    .palettes = gTilesetPalettes_Kanto_General,
+    .metatiles = gMetatiles_Kanto_General,
+    .metatileAttributes = gMetatileAttributes_Kanto_General,
+    .callback = InitTilesetAnim_JohtoGeneral,
+};
+
+const struct Tileset gTileset_JohtoMart =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_JohtoMart,
+    .palettes = gTilesetPalettes_JohtoMart,
+    .metatiles = gMetatiles_JohtoMart,
+    .metatileAttributes = gMetatileAttributes_JohtoMart,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_Kanto_PokemonCenter =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Kanto_PokemonCenter,
+    .palettes = gTilesetPalettes_Kanto_PokemonCenter,
+    .metatiles = gMetatiles_Kanto_PokemonCenter,
+    .metatileAttributes = gMetatileAttributes_Kanto_PokemonCenter,
+    .callback = NULL,
+};
+
 // ============================================================
 // Johto tilesets (placeholder — replace with actual assets)
 // ============================================================

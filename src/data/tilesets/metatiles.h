@@ -516,6 +516,21 @@ const u16 gMetatileAttributes_Johto_NorthEast[] = INCBIN_U16("data/tilesets/prim
 const u16 gMetatiles_Kanto_Building[] = INCBIN_U16("data/tilesets/primary/kanto_building/metatiles.bin");
 const u16 gMetatileAttributes_Kanto_Building[] = INCBIN_U16("data/tilesets/primary/kanto_building/metatile_attributes.bin");
 
+const u16 gMetatiles_Johto_NorthWest[] = INCBIN_U16("data/tilesets/primary/johto_north_west/metatiles.bin");
+const u16 gMetatileAttributes_Johto_NorthWest[] = INCBIN_U16("data/tilesets/primary/johto_north_west/metatile_attributes.bin");
+
+const u16 gMetatiles_Johto_South[] = INCBIN_U16("data/tilesets/primary/johto_south/metatiles.bin");
+const u16 gMetatileAttributes_Johto_South[] = INCBIN_U16("data/tilesets/primary/johto_south/metatile_attributes.bin");
+
+const u16 gMetatiles_Kanto_General[] = INCBIN_U16("data/tilesets/primary/kanto_general/metatiles.bin");
+const u16 gMetatileAttributes_Kanto_General[] = INCBIN_U16("data/tilesets/primary/kanto_general/metatile_attributes.bin");
+
+const u16 gMetatiles_JohtoMart[] = INCBIN_U16("data/tilesets/secondary/johto_mart/metatiles.bin");
+const u16 gMetatileAttributes_JohtoMart[] = INCBIN_U16("data/tilesets/secondary/johto_mart/metatile_attributes.bin");
+
+const u16 gMetatiles_Kanto_PokemonCenter[] = INCBIN_U16("data/tilesets/secondary/kanto_pokemon_center/metatiles.bin");
+const u16 gMetatileAttributes_Kanto_PokemonCenter[] = INCBIN_U16("data/tilesets/secondary/kanto_pokemon_center/metatile_attributes.bin");
+
 // ============================================================
 // Johto tilesets (placeholder — replace with actual assets)
 // ============================================================
