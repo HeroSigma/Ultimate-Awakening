@@ -2,6 +2,8 @@
 #include "main.h"
 #include "bike.h"
 #include "event_data.h"
+#include "constants/regions.h"
+#include "constants/vars.h"
 #include "event_object_movement.h"
 #include "field_camera.h"
 #include "field_control_avatar.h"
@@ -1581,8 +1583,14 @@ u16 GetRivalAvatarGraphicsIdByStateIdAndGender(u8 state, enum Gender gender)
 {
     if (IS_FRLG)
         return GetPlayerAvatarGraphicsIdByStateIdAndGender(state, gender);
-    else
-        return sRivalAvatarGfxIds[state][gender];
+#if FRLG_INCLUDE_KANTO_TILESETS
+    // In Kanto region, the rival is Blue (male) or Green (female) — not Brendan/May.
+    // Blue and Green only have a "normal" overworld state; for all other states
+    // fall back to the normal walking sprite.
+    if (VarGet(VAR_CURRENT_REGION) == REGION_KANTO)
+        return (gender == FEMALE) ? OBJ_EVENT_GFX_GREEN_NORMAL : OBJ_EVENT_GFX_BLUE;
+#endif
+    return sRivalAvatarGfxIds[state][gender];
 }
 
 u16 GetPlayerAvatarGraphicsIdByStateIdAndGender(u8 state, enum Gender gender)

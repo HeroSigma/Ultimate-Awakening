@@ -1,20 +1,83 @@
 RocketHideout_B2F_Frlg_MapScripts::
 	.byte 0
 
-RocketHideout_B2F_EventScript_Grunt::
-	trainerbattle_single TRAINER_TEAM_ROCKET_GRUNT_13, RocketHideout_B2F_Text_GruntIntro, RocketHideout_B2F_Text_GruntDefeat
-	msgbox RocketHideout_B2F_Text_GruntPostBattle, MSGBOX_AUTOCLOSE
+RockerHideout2_DeactivateGenerator::
 	end
 
-RocketHideout_B2F_Text_GruntIntro::
-	.string "BOSS said you can see ghosts with\n"
-	.string "the SILPH SCOPE.$"
+RocketHideout_B2F_EventScript_ArianaTrainer::
+	end
 
-RocketHideout_B2F_Text_GruntDefeat::
-	.string "I surrender!$"
+RocketHideout_B2F_EventScript_ChoosePartyForMultiBattle::
+	end
 
-RocketHideout_B2F_Text_GruntPostBattle::
-	.string "The TEAM ROCKET HQ has four\n"
-	.string "underground floors.\p"
-	.string "Think you can reach the BOSS?$"
+RocketHideout_B2F_EventScript_DefeatedAriana::
+	end
 
+RocketHideout_B2F_EventScript_DoLanceMultiBattle::
+	end
+
+RocketHideout_B2F_EventScript_Electrode::
+	end
+
+RocketHideout_B2F_EventScript_ElectrodeDone::
+	end
+
+RocketHideout_B2F_EventScript_Grunt::
+	end
+
+RocketHideout_B2F_EventScript_Grunt14::
+	end
+
+RocketHideout_B2F_EventScript_Grunt15::
+	end
+
+RocketHideout_B2F_EventScript_Grunt16::
+	end
+
+RocketHideout_B2F_EventScript_GruntTrainer::
+	end
+
+RocketHideout_B2F_EventScript_Lance::
+	end
+
+RocketHideout_B2F_EventScript_LanceTriggerLeft::
+	end
+
+RocketHideout_B2F_EventScript_LanceTriggerRight::
+	end
+
+RocketHideout_B2F_EventScript_Ran_Electrode::
+	end
+
+RocketHideout_B2F_EventScript_ReadyForBattlePrompt::
+	end
+
+RocketHideout_B2F_HideGate::
+	end
+
+RocketHideout_B2F_MoveLanceDragonite::
+	end
+
+RocketHideout_B2F_OnLoad::
+	end
+
+RocketHideout_B2F_Trigger_Ariana::
+	end
+
+RocketHideout_B2F_Trigger_Electrode::
+	end
+
+RocketHideout_B2F_Trigger_MurkrowGate::
+	end
+
+RocketHideout_B2F_Trigger_MurkrowStairs::
+	end
+
+RocketHideout_B2F_Trigger_PlayerMoveLeft::
+	end
+
+RocketHideout_B2F_Trigger_PlayerMoveRight::
+	end
+
+RocketHideout_EventScript_Item_Thief::
+	end

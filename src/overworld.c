@@ -1,5 +1,7 @@
 #include "global.h"
 #include "overworld.h"
+#include "constants/regions.h"
+#include "constants/vars.h"
 #include "battle_pyramid.h"
 #include "battle_setup.h"
 #include "battle_util.h"
@@ -900,6 +902,7 @@ void LoadMapFromCameraTransition(u8 mapGroup, u8 mapNum)
     ChooseAmbientCrySpecies();
     SetDefaultFlashLevel();
     Overworld_ClearSavedMusic();
+    UpdateCurrentRegionVar();
     RunOnTransitionMapScript();
     InitMap();
     CopySecondaryTilesetToVramUsingHeap(gMapHeader.mapLayout);
@@ -969,6 +972,7 @@ static void LoadMapFromWarp(bool32 a1)
         FlagClear(FLAG_SYS_USE_FLASH);
     SetDefaultFlashLevel();
     Overworld_ClearSavedMusic();
+    UpdateCurrentRegionVar();
     RunOnTransitionMapScript();
     UpdateLocationHistoryForRoamer();
     MoveAllRoamersToOtherLocationSets();
@@ -4039,4 +4043,16 @@ static void Task_OvwldCredits_WaitFade(u8 taskId)
         SetMainCallback2(CB2_LoadMap);
         DestroyTask(taskId);
     }
+}
+
+// Sets VAR_CURRENT_REGION to REGION_KANTO when the active map group falls in the
+// FRLG range (MAP_GROUP_FRLG_FIRST..MAP_GROUP_FRLG_LAST), otherwise REGION_HOENN.
+// Called automatically before every MAP_SCRIPT_ON_TRANSITION run.
+void UpdateCurrentRegionVar(void)
+{
+    u8 mapGroup = gSaveBlock1Ptr->location.mapGroup;
+    if (mapGroup >= MAP_GROUP_FRLG_FIRST && mapGroup <= MAP_GROUP_FRLG_LAST)
+        VarSet(VAR_CURRENT_REGION, REGION_KANTO);
+    else
+        VarSet(VAR_CURRENT_REGION, REGION_HOENN);
 }

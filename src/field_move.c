@@ -5,49 +5,59 @@
 #include "fldeff_misc.h"
 #include "party_menu.h"
 #include "constants/field_move.h"
+#include "constants/flags.h"
+#include "constants/flags_kanto.h"
 #include "constants/moves.h"
 #include "constants/party_menu.h"
+#include "constants/regions.h"
+#include "constants/vars.h"
 
 static bool32 IsFieldMoveUnlocked_Cut(void)
 {
-    if (IS_FRLG)
-        return FlagGet(FLAG_BADGE02_GET);
+    if (VarGet(VAR_CURRENT_REGION) == REGION_KANTO)
+        return FlagGet(FLAG_KANTO_BADGE02_GET);  // Cascade Badge (Misty)
 
-    return FlagGet(FLAG_BADGE01_GET);
+    return FlagGet(FLAG_BADGE01_GET);            // Stone Badge (Roxanne)
 }
 
 static bool32 IsFieldMoveUnlocked_Flash(void)
 {
-    if (IS_FRLG)
-        return FlagGet(FLAG_BADGE01_GET);
+    if (VarGet(VAR_CURRENT_REGION) == REGION_KANTO)
+        return FlagGet(FLAG_KANTO_BADGE01_GET);  // Boulder Badge (Brock)
 
-    return FlagGet(FLAG_BADGE02_GET);
+    return FlagGet(FLAG_BADGE02_GET);            // Knuckle Badge (Brawly)
 }
 
 static bool32 IsFieldMoveUnlocked_RockSmash(void)
 {
-    if (IS_FRLG)
-        return FlagGet(FLAG_BADGE06_GET);
+    if (VarGet(VAR_CURRENT_REGION) == REGION_KANTO)
+        return FlagGet(FLAG_KANTO_BADGE06_GET);  // Marsh Badge (Sabrina)
 
-    return FlagGet(FLAG_BADGE03_GET);
+    return FlagGet(FLAG_BADGE03_GET);            // Dynamo Badge (Wattson)
 }
 
 static bool32 IsFieldMoveUnlocked_Strength(void)
 {
-    return FlagGet(FLAG_BADGE04_GET);
+    if (VarGet(VAR_CURRENT_REGION) == REGION_KANTO)
+        return FlagGet(FLAG_KANTO_BADGE05_GET);  // Soul Badge (Koga)
+
+    return FlagGet(FLAG_BADGE04_GET);            // Heat Badge (Flannery)
 }
 
 static bool32 IsFieldMoveUnlocked_Surf(void)
 {
-    return FlagGet(FLAG_BADGE05_GET);
+    if (VarGet(VAR_CURRENT_REGION) == REGION_KANTO)
+        return FlagGet(FLAG_KANTO_BADGE05_GET);  // Soul Badge (Koga)
+
+    return FlagGet(FLAG_BADGE05_GET);            // Balance Badge (Norman)
 }
 
 static bool32 IsFieldMoveUnlocked_Fly(void)
 {
-    if (IS_FRLG)
-        return FlagGet(FLAG_BADGE03_GET);
+    if (VarGet(VAR_CURRENT_REGION) == REGION_KANTO)
+        return FlagGet(FLAG_KANTO_BADGE03_GET);  // Thunder Badge (Lt. Surge)
 
-    return FlagGet(FLAG_BADGE06_GET);
+    return FlagGet(FLAG_BADGE06_GET);            // Feather Badge (Winona)
 }
 
 static bool32 IsFieldMoveUnlocked_Dive(void)
@@ -57,10 +67,10 @@ static bool32 IsFieldMoveUnlocked_Dive(void)
 
 static bool32 IsFieldMoveUnlocked_Waterfall(void)
 {
-    if (IS_FRLG)
-        return FlagGet(FLAG_BADGE07_GET);
+    if (VarGet(VAR_CURRENT_REGION) == REGION_KANTO)
+        return FlagGet(FLAG_KANTO_BADGE07_GET);  // Volcano Badge (Blaine)
 
-    return FlagGet(FLAG_BADGE08_GET);
+    return FlagGet(FLAG_BADGE08_GET);            // Rain Badge (Juan)
 }
 
 #if OW_ROCK_CLIMB_FIELD_MOVE == TRUE

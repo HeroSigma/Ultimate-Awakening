@@ -46,9 +46,7 @@
 #define NUM_TEMP_FLAGS   (TEMP_FLAGS_END - TEMP_FLAGS_START + 1)
 
 #if IS_FRLG
-
 #include "constants/flags_frlg.h"
-
 #else
 
 #define FLAG_UNUSED_0x020    0x20 // Unused Flag
@@ -884,7 +882,7 @@
 #define FLAG_HIDE_GRANITE_CAVE_STEVEN                               0x341
 #define FLAG_HIDE_ROUTE_128_STEVEN                                  0x342
 #define FLAG_HIDE_SLATEPORT_CITY_GABBY_AND_TY                       0x343
-#define FLAG_HIDE_BATTLE_FRONTIER_RECEPTION_GATE_SCOTT              0x344
+// #define FLAG_HIDE_BATTLE_FRONTIER_RECEPTION_GATE_SCOTT              0x344 @REMOVED
 #define FLAG_HIDE_ROUTE_110_BIRCH                                   0x345
 #define FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_POKEBALL_CHIKORITA     0x346
 #define FLAG_HIDE_SOOTOPOLIS_CITY_MAN_1                             0x347
@@ -1384,8 +1382,8 @@
 #define FLAG_VISITED_SOOTOPOLIS_CITY                (SYSTEM_FLAGS + 0x1D)
 #define FLAG_VISITED_EVER_GRANDE_CITY               (SYSTEM_FLAGS + 0x1E)
 
-#define FLAG_IS_CHAMPION                            (SYSTEM_FLAGS + 0x1F) // Seems to be related to linking.
-#define FLAG_NURSE_UNION_ROOM_REMINDER              (SYSTEM_FLAGS + 0x20)
+// #define FLAG_IS_CHAMPION                            (SYSTEM_FLAGS + 0x1F) // Seems to be related to linking. @REMOVED
+// #define FLAG_NURSE_UNION_ROOM_REMINDER              (SYSTEM_FLAGS + 0x20) @REMOVED
 
 #define FLAG_UNUSED_0x881                           (SYSTEM_FLAGS + 0x21) // Unused Flag
 #define FLAG_UNUSED_0x882                           (SYSTEM_FLAGS + 0x22) // Unused Flag
@@ -1658,7 +1656,7 @@
 #define FLAG_TEMP_SKIP_GABBY_INTERVIEW          FLAG_TEMP_1
 #define FLAG_TEMP_REGICE_PUZZLE_STARTED         FLAG_TEMP_2
 #define FLAG_TEMP_REGICE_PUZZLE_FAILED          FLAG_TEMP_3
-#define FLAG_TEMP_HIDE_FOLLOWER                 FLAG_TEMP_E
+// #define FLAG_TEMP_HIDE_FOLLOWER                 FLAG_TEMP_E @REMOVED
 #define FLAG_TEMP_HIDE_MIRAGE_ISLAND_BERRY_TREE FLAG_TEMP_11
 
 // FRLG flags
@@ -1705,7 +1703,7 @@
 #define FLAG_HIDE_ROUTE_22_RIVAL                           0
 #define FLAG_HIDE_PEWTER_MUSEUM_GUIDE                      0
 #define FLAG_HIDE_TOWER_RIVAL                              0
-#define FLAG_HIDE_MOLTRES                                  0
+// #define FLAG_HIDE_MOLTRES                                  0 @REMOVED
 #define FLAG_HIDE_SILPH_ROCKETS                            0
 #define FLAG_HIDE_ROUTE_12_SNORLAX                         0
 #define FLAG_HIDE_VIRIDIAN_GIOVANNI                        0
@@ -1716,20 +1714,20 @@
 #define FLAG_HIDE_OAK_IN_CHAMP_ROOM                        0
 #define FLAG_HIDE_GAME_CORNER_ROCKET                       0
 #define FLAG_HIDE_CERULEAN_CAVE_GUARD                      0
-#define FLAG_HIDE_ZAPDOS                                   0
+// #define FLAG_HIDE_ZAPDOS                                   0 @REMOVED
 #define FLAG_HIDE_TOWER_ROCKET_1                           0
 #define FLAG_HIDE_CELADON_ROCKETS                          0
 #define FLAG_HIDE_DOJO_HITMONLEE_BALL                      0
 #define FLAG_HIDE_DOJO_HITMONCHAN_BALL                     0
 #define FLAG_HIDE_CINNABAR_BILL                            0
-#define FLAG_HIDE_UNION_ROOM_PLAYER_1                      0
-#define FLAG_HIDE_UNION_ROOM_PLAYER_2                      0
-#define FLAG_HIDE_UNION_ROOM_PLAYER_3                      0
-#define FLAG_HIDE_UNION_ROOM_PLAYER_4                      0
-#define FLAG_HIDE_UNION_ROOM_PLAYER_5                      0
-#define FLAG_HIDE_UNION_ROOM_PLAYER_6                      0
-#define FLAG_HIDE_UNION_ROOM_PLAYER_7                      0
-#define FLAG_HIDE_UNION_ROOM_PLAYER_8                      0
+// #define FLAG_HIDE_UNION_ROOM_PLAYER_1                      0 @REMOVED
+// #define FLAG_HIDE_UNION_ROOM_PLAYER_2                      0 @REMOVED
+// #define FLAG_HIDE_UNION_ROOM_PLAYER_3                      0 @REMOVED
+// #define FLAG_HIDE_UNION_ROOM_PLAYER_4                      0 @REMOVED
+// #define FLAG_HIDE_UNION_ROOM_PLAYER_5                      0 @REMOVED
+// #define FLAG_HIDE_UNION_ROOM_PLAYER_6                      0 @REMOVED
+// #define FLAG_HIDE_UNION_ROOM_PLAYER_7                      0 @REMOVED
+// #define FLAG_HIDE_UNION_ROOM_PLAYER_8                      0 @REMOVED
 #define FLAG_HIDE_CINNABAR_SEAGALLOP                       0
 #define FLAG_HIDE_SAFFRON_FAN_CLUB_BLACKBELT               0
 #define FLAG_HIDE_SAFFRON_FAN_CLUB_ROCKER                  0
@@ -1752,8 +1750,8 @@
 #define FLAG_HIDE_THREE_ISLAND_ANTIBIKERS                  0
 #define FLAG_0x07F                                         0
 #define FLAG_HIDE_ROUTE_16_SNORLAX                         0
-#define FLAG_HIDE_MEWTWO                                   0
-#define FLAG_HIDE_ARTICUNO                                 0
+// #define FLAG_HIDE_MEWTWO                                   0 @REMOVED
+// #define FLAG_HIDE_ARTICUNO                                 0 @REMOVED
 #define FLAG_HIDE_TOWER_ROCKET_2                           0
 #define FLAG_HIDE_TOWER_ROCKET_3                           0
 #define FLAG_HIDE_POWER_PLANT_ELECTRODE_1                  0
@@ -2006,7 +2004,7 @@
 #define FLAG_GOT_ITEMFINDER                              0
 #define FLAG_WOKE_UP_ROUTE_12_SNORLAX                    0
 #define FLAG_GOT_TM39_FROM_BROCK                         0
-#define FLAG_GOT_SUPER_ROD                               0
+// #define FLAG_GOT_SUPER_ROD                               0 @REMOVED
 #define FLAG_GOT_EXP_SHARE_FROM_OAKS_AIDE                0
 #define FLAG_DID_MARC_TRADE                              0
 #define FLAG_BEAT_RIVAL_IN_OAKS_LAB                      0
@@ -2020,8 +2018,8 @@
 #define FLAG_0x260                                       0
 #define FLAG_0x261                                       0
 #define FLAG_0x262                                       0
-#define FLAG_GOT_EEVEE                                   0
-#define FLAG_FOUND_BOTH_VERMILION_GYM_SWITCHES           0
+// #define FLAG_GOT_EEVEE                                   0 @REMOVED
+// #define FLAG_FOUND_BOTH_VERMILION_GYM_SWITCHES           0 @REMOVED
 #define FLAG_CINNABAR_GYM_QUIZ_1                         0
 #define FLAG_CINNABAR_GYM_QUIZ_2                         0
 #define FLAG_CINNABAR_GYM_QUIZ_3                         0
@@ -2381,7 +2379,10 @@
 #define FLAG_SYS_GOT_BERRY_POUCH                                    0
 #define FLAG_SYS_UNLOCKED_TANOBY_RUINS                              0
 
-// World Map Flags
+#if !FRLG_INCLUDE_KANTO_TILESETS
+// World Map Flags — zero stubs for pure Emerald builds without Kanto support.
+// When FRLG_INCLUDE_KANTO_TILESETS is enabled, flags_kanto.h (included below)
+// provides real flag values so setworldmapflag and FlagGet work correctly.
 #define FLAG_WORLD_MAP_PALLET_TOWN                                  0
 #define FLAG_WORLD_MAP_VIRIDIAN_CITY                                0
 #define FLAG_WORLD_MAP_PEWTER_CITY                                  0
@@ -2433,8 +2434,17 @@
 #define FLAG_WORLD_MAP_THREE_ISLAND_DUNSPARCE_TUNNEL                0
 #define FLAG_WORLD_MAP_SEVEN_ISLAND_SEVAULT_CANYON_TANOBY_KEY       0
 #define FLAG_WORLD_MAP_BIRTH_ISLAND_EXTERIOR                        0
+#endif // !FRLG_INCLUDE_KANTO_TILESETS
 
-#endif
+#if FRLG_INCLUDE_KANTO_TILESETS
+// Kanto-specific flags used by FRLG map events in Emerald+Kanto builds.
+// Uses FLAG_KANTO_HIDDEN_ITEMS_START (0x400) to avoid clashing with
+// Emerald's hidden item range (FLAG_HIDDEN_ITEMS_START = 0x1F4).
+// Also provides real FLAG_WORLD_MAP_* values (base 0x500) for fly destinations.
+#include "constants/flags_kanto.h"
+#endif // FRLG_INCLUDE_KANTO_TILESETS
+
+#endif // !IS_FRLG
 
 #if TESTING
 #define TESTING_FLAGS_START                     0x5000
@@ -2448,5 +2458,6 @@
 #define TESTING_FLAG_UNUSED_7                   (TESTING_FLAGS_START + 0x7)
 #endif // TESTING
 
+#include "constants/flags_kanto.h"
 
 #endif // GUARD_CONSTANTS_FLAGS_H

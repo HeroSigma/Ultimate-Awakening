@@ -266,13 +266,14 @@
 #define VAR_ROXANNE_CALL_STEP_COUNTER                    0x40F4
 #define VAR_SCOTT_BF_CALL_STEP_COUNTER                   0x40F5
 #define VAR_RIVAL_RAYQUAZA_CALL_STEP_COUNTER             0x40F6
-#define VAR_UNUSED_0x40F7                                0x40F7 // Unused Var
-#define VAR_UNUSED_0x40F8                                0x40F8 // Unused Var
-#define VAR_UNUSED_0x40F9                                0x40F9 // Unused Var
-#define VAR_UNUSED_0x40FA                                0x40FA // Unused Var
-#define VAR_UNUSED_0x40FB                                0x40FB // Unused Var
-#define VAR_UNUSED_0x40FC                                0x40FC // Unused Var
-#define VAR_UNUSED_0x40FD                                0x40FD // Unused Var
+// Kanto/Johto multi-region state vars (formerly unused slots)
+#define VAR_ROUTE27_STATE                                0x40F7
+#define VAR_SUICUNE_ENCOUNTERS                           0x40F8
+#define VAR_KANTO_ROCKET_STORY_STATE                     0x40F9
+#define VAR_CERULEAN_CITY_STATE                          0x40FA
+#define VAR_KANTO_SAFARI_ZONE_PROGRESS                   0x40FB
+#define VAR_ROUTE27_BAOBA_CALL                           0x40FC
+#define VAR_CURRENT_REGION                               0x40FD // enum Region value (see constants/regions.h); auto-set on map load
 #define VAR_UNUSED_0x40FE                                0x40FE // Unused Var
 #define VAR_UNUSED_0x40FF                                0x40FF // Unused Var
 

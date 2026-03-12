@@ -1,5 +1,5 @@
 {
-  "id": "MAP_NAVEL_ROCK_FORK",
+  "id": "MAP_NAVEL_ROCK_FORK_FRLG",
   "name": "NavelRock_Fork",
   "layout": "LAYOUT_NAVEL_ROCK_FORK",
   "music": "MUS_RG_SEVII_CAVE",
@@ -26,7 +26,7 @@
       "x": 11,
       "y": 79,
       "elevation": 3,
-      "dest_map": "MAP_NAVEL_ROCK_B1F",
+      "dest_map": "MAP_NAVEL_ROCK_B1F_FRLG",
       "dest_warp_id": "1"
     },
     {

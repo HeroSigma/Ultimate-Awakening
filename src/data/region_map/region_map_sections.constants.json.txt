@@ -19,4 +19,12 @@ enum {
 #define KANTO_MAPSEC_END    MAPSEC_SPECIAL_AREA
 #define KANTO_MAPSEC_COUNT (KANTO_MAPSEC_END - KANTO_MAPSEC_START + 1)
 
+// Johto MAPSEC range — update these once Johto map sections are added to region_map_sections.json
+#define JOHTO_MAPSEC_START  MAPSEC_NONE
+#define JOHTO_MAPSEC_END    MAPSEC_NONE
+
+// Sinnoh MAPSEC range — update these once Sinnoh map sections are added to region_map_sections.json
+#define SINNOH_MAPSEC_START MAPSEC_NONE
+#define SINNOH_MAPSEC_END   MAPSEC_NONE
+
 #endif // GUARD_CONSTANTS_REGION_MAP_SECTIONS_H

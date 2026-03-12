@@ -16,7 +16,7 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_PALLET_TOWN",
+      "map": "MAP_PALLET_TOWN_FRLG",
       "offset": 0,
       "direction": "up"
     },
@@ -103,7 +103,7 @@
       "x": 13,
       "y": -3,
       "target_local_id": "LOCALID_PALLET_FAT_MAN",
-      "target_map": "MAP_PALLET_TOWN"
+      "target_map": "MAP_PALLET_TOWN_FRLG"
     }
   ],
   "warp_events": [

@@ -121,21 +121,21 @@
       "x": 6,
       "y": 8,
       "elevation": 0,
-      "dest_map": "MAP_CERULEAN_CITY",
+      "dest_map": "MAP_CERULEAN_CITY_FRLG",
       "dest_warp_id": "3"
     },
     {
       "x": 7,
       "y": 8,
       "elevation": 0,
-      "dest_map": "MAP_CERULEAN_CITY",
+      "dest_map": "MAP_CERULEAN_CITY_FRLG",
       "dest_warp_id": "3"
     },
     {
       "x": 8,
       "y": 8,
       "elevation": 0,
-      "dest_map": "MAP_CERULEAN_CITY",
+      "dest_map": "MAP_CERULEAN_CITY_FRLG",
       "dest_warp_id": "3"
     },
     {

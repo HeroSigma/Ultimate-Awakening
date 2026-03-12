@@ -65,6 +65,18 @@ EWRAM_DATA bool8 gIsFishingEncounter = 0;
 EWRAM_DATA bool8 gIsSurfingEncounter = 0;
 EWRAM_DATA u8 gChainFishingDexNavStreak = 0;
 
+// In Emerald+Kanto builds, define FIRERED and LEAFGREEN so that Kanto wild encounter
+// data (guarded by #ifdef FIRERED / #ifdef LEAFGREEN in the generated header) is
+// compiled into gWildMonHeaders[]. wild_encounters.h is auto-generated and must not
+// be modified; these defines are the correct injection point.
+#if FRLG_INCLUDE_KANTO_TILESETS && !IS_FRLG
+#ifndef FIRERED
+#define FIRERED
+#endif
+#ifndef LEAFGREEN
+#define LEAFGREEN
+#endif
+#endif
 #include "data/wild_encounters.h"
 
 static const struct WildPokemon sWildFeebas = {20, 25, SPECIES_FEEBAS};

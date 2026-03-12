@@ -1,47 +1,33 @@
 Route2_House_Frlg_MapScripts::
 	.byte 0
 
-Route2_House_EventScript_Scientist::
-	msgbox Route2_House_Text_FaintedMonsCanUseFieldMoves, MSGBOX_NPC
-	end
-
-Route2_House_EventScript_Reyley::
+Route2_House_EventScript_Man::
 	lock
 	faceplayer
-	setvar VAR_0x8008, INGAME_TRADE_MR_MIME
-	call EventScript_GetInGameTradeSpeciesInfo
-	goto_if_set FLAG_DID_MIMIEN_TRADE, Route2_House_EventScript_AlreadyTraded
-	msgbox Trade_Text_LookingForMonWannaTradeForMon, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, Route2_House_EventScript_DeclineTrade
-	call EventScript_ChooseMonForInGameTrade
-	goto_if_ge VAR_0x8004, PARTY_SIZE, Route2_House_EventScript_DeclineTrade
-	call EventScript_GetInGameTradeSpecies
-	goto_if_ne VAR_RESULT, VAR_0x8009, Route2_House_EventScript_NotRequestedMon
-	call EventScript_DoInGameTrade
-	msgbox Trade_Text_HeyThanks
-	setflag FLAG_DID_MIMIEN_TRADE
+	goto_if_set FLAG_GOT_ROUTE2_NUGGET, Route2_House_EventScript_ManAfter
+	msgbox Route2_House_Text_Fisher, MSGBOX_DEFAULT 
+	giveitem ITEM_NUGGET
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	msgbox Route2_House_Text_Fisher_GotNugget, MSGBOX_DEFAULT
+	closemessage
+	setflag FLAG_GOT_ROUTE2_NUGGET
 	release
 	end
 
-Route2_House_EventScript_DeclineTrade::
-	msgbox Trade_Text_AwwOhWell
+Route2_House_EventScript_ManAfter::
+	msgbox Route2_House_Text_Fisher_GotNugget, MSGBOX_DEFAULT
+	closemessage
 	release
 	end
 
-Route2_House_EventScript_NotRequestedMon::
-	bufferspeciesname STR_VAR_1, VAR_0x8009
-	msgbox Trade_Text_WhatThatsNoMon
-	release
-	end
+Route2_House_Text_Fisher:
+	.string "Hi! Wow, I'm glad to see you.\p"
+	.string "You're the first visitor I've had in a\n"
+	.string "long time.\p"
+	.string "I'm super-happy! Let me give you a\n"
+	.string "little present.$"
 
-Route2_House_EventScript_AlreadyTraded::
-	msgbox Trade_Text_IsntMyOldMonGreat
-	release
-	end
-
-Route2_House_Text_FaintedMonsCanUseFieldMoves::
-	.string "A fainted POKéMON just has no\n"
-	.string "energy left to battle.\p"
-	.string "It can still use moves like CUT\n"
-	.string "outside of battle.$"
-
+Route2_House_Text_Fisher_GotNugget:
+	.string "That's a NUGGET.\p"
+	.string "I can't give you any nuggets of\n"
+	.string "wisdom, so that'll have to do!$"

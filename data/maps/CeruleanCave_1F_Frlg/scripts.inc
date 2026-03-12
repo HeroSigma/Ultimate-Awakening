@@ -1,7 +1,16 @@
 CeruleanCave_1F_Frlg_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, CeruleanCave_1F_OnTransition
 	.byte 0
 
-CeruleanCave_1F_OnTransition::
-	setworldmapflag FLAG_WORLD_MAP_CERULEAN_CAVE_1F
-	end
+
+CeruleanCave1_EventScript_MaxElixir::
+    finditem ITEM_MAX_ELIXIR
+    end
+
+CeruleanCave1_EventScript_RareCandy::
+    finditem ITEM_RARE_CANDY
+    end
+
+CeruleanCave1_EventScript_PpUp::
+    finditem ITEM_PP_UP
+    end
+

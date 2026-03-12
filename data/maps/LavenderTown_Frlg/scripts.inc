@@ -1,88 +1,74 @@
 LavenderTown_Frlg_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, LavenderTown_OnTransition
+	map_script MAP_SCRIPT_ON_TRANSITION, LavenderTown_EventScript_CityEnter
 	.byte 0
 
-LavenderTown_OnTransition::
-	setworldmapflag FLAG_WORLD_MAP_LAVENDER_TOWN
-	setvar VAR_MAP_SCENE_S_S_ANNE_2F_CORRIDOR, 1
-	setflag FLAG_HIDE_SS_ANNE_RIVAL
+LavenderTown_EventScript_CityEnter::
+	setflag FLAG_VISITED_LAVENDER_TOWN
 	end
 
-LavenderTown_EventScript_LittleGirl::
-	lock
-	faceplayer
-	msgbox LavenderTown_Text_DoYouBelieveInGhosts, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, YES, LavenderTown_EventScript_LittleGirlBelieve
-	msgbox LavenderTown_Text_JustImaginingWhiteHand
-	release
+LavenderTown_EventScript_PokefanM::
+	msgbox LavenderTown_Text_PokefanM, MSGBOX_NPC
 	end
 
-LavenderTown_EventScript_LittleGirlBelieve::
-	msgbox LavenderTown_Text_SoThereAreBelievers
-	release
+LavenderTown_EventScript_Teacher::
+	msgbox LavenderTown_Text_Teacher, MSGBOX_NPC
 	end
 
-LavenderTown_EventScript_WorkerM::
-	msgbox LavenderTown_Text_TownKnownAsMonGraveSite, MSGBOX_NPC
+LavenderTown_EventScript_Gramps::
+	msgbox LavenderTown_Text_Gramps, MSGBOX_NPC
 	end
 
-LavenderTown_EventScript_Boy::
-	msgbox LavenderTown_Text_GhostsAppearedInTower, MSGBOX_NPC
+LavenderTown_EventScript_Youngster::
+	msgbox LavenderTown_Text_Youngster, MSGBOX_NPC
 	end
 
 LavenderTown_EventScript_TownSign::
-	msgbox LavenderTown_Text_TownSign, MSGBOX_SIGN
+	msgbox LavenderTown_Text_Sign, MSGBOX_SIGN
 	end
 
-LavenderTown_EventScript_SilphScopeNotice::
-	msgbox LavenderTown_Text_SilphScopeNotice, MSGBOX_SIGN
+LavenderTown_EventScript_RadioTowerSign::
+	msgbox LavenderTown_Text_KantoRadioStationSign, MSGBOX_SIGN
 	end
 
-LavenderTown_EventScript_VolunteerHouseSign::
-	msgbox LavenderTown_Text_VolunteerPokemonHouse, MSGBOX_SIGN
+LavenderTown_EventScript_VolunteerSign::
+	msgbox LavenderTown_Text_VolunteerPokemonHouseSign, MSGBOX_SIGN
 	end
 
-LavenderTown_EventScript_PokemonTowerSign::
-	msgbox LavenderTown_Text_PokemonTowerSign, MSGBOX_SIGN
+LavenderTown_EventScript_SoulHouseSign::
+	msgbox LavenderTown_Text_SoulHouseSign, MSGBOX_SIGN
 	end
 
-LavenderTown_Text_DoYouBelieveInGhosts::
-	.string "Do you believe in ghosts?$"
+LavenderTown_Text_PokefanM:
+	.string "That's quite some building, eh?\p"
+	.string "It's KANTO's RADIO TOWER.$"
 
-LavenderTown_Text_SoThereAreBelievers::
-	.string "Really?\n"
-	.string "So there are believers…$"
+LavenderTown_Text_Teacher:
+	.string "KANTO has many good radio shows.$"
 
-LavenderTown_Text_JustImaginingWhiteHand::
-	.string "Hahaha, I guess not.\p"
-	.string "That white hand on your shoulder…\n"
-	.string "I'm just imagining it.$"
+LavenderTown_Text_Gramps:
+	.string "People come from all over to pay\n"
+	.string "their respects to the departed\l"
+	.string "souls of POKéMON.$"
 
-LavenderTown_Text_TownKnownAsMonGraveSite::
-	.string "This town is known as the grave\n"
-	.string "site of POKéMON.\p"
-	.string "Memorial services are held in\n"
-	.string "POKéMON TOWER.$"
+LavenderTown_Text_Youngster:
+	.string "You need a POKé FLUTE to wake\n"
+	.string "sleeping POKéMON.\p"
+	.string "Every trainer has to know that!$"
 
-LavenderTown_Text_GhostsAppearedInTower::
-	.string "Ghosts appeared in POKéMON TOWER.\p"
-	.string "I think they're the spirits of\n"
-	.string "POKéMON that the ROCKETS killed.$"
-
-LavenderTown_Text_TownSign::
-	.string "LAVENDER TOWN\n"
+LavenderTown_Text_Sign:
+	.string "LAVENDER TOWN\p"
 	.string "The Noble Purple Town$"
 
-LavenderTown_Text_SilphScopeNotice::
-	.string "New SILPH SCOPE!\n"
-	.string "Make the Invisible Plain to See!\p"
-	.string "SILPH CO.$"
+LavenderTown_Text_KantoRadioStationSign:
+	.string "KANTO RADIO STATION\p"
+	.string "Your Favorite Programs On-Air\n"
+	.string "Around the Clock!$"
 
-LavenderTown_Text_VolunteerPokemonHouse::
-	.string "LAVENDER VOLUNTEER\n"
-	.string "POKéMON HOUSE$"
+LavenderTown_Text_VolunteerPokemonHouseSign:
+	.string "LAVENDER VOLUNTEER POKéMON\n"
+	.string "HOUSE$"
 
-LavenderTown_Text_PokemonTowerSign::
-	.string "POKéMON TOWER\n"
-	.string "Becalm the Spirits of POKéMON$"
-
+LavenderTown_Text_SoulHouseSign:
+	.string "SOUL HOUSE\p"
+	.string "May the Souls of POKéMON Rest\n"
+	.string "Easy$"

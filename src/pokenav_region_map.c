@@ -19,6 +19,7 @@
 #include "constants/rgb.h"
 #include "constants/songs.h"
 #include "constants/region_map_sections.h"
+#include "regions.h"
 
 #define GFXTAG_CITY_ZOOM 6
 #define PALTAG_CITY_ZOOM 11
@@ -374,8 +375,11 @@ static u32 LoopedTask_OpenRegionMap(s32 taskState)
             menuGfxId = POKENAV_GFX_MAP_MENU_ZOOMED_IN;
 
         UpdateRegionMapHelpBarText();
-        LoadLeftHeaderGfxForIndex(menuGfxId);
-        ShowLeftHeaderGfx(menuGfxId, TRUE, TRUE);
+        if (GetCurrentRegion() != REGION_KANTO)
+        {
+            LoadLeftHeaderGfxForIndex(menuGfxId);
+            ShowLeftHeaderGfx(menuGfxId, TRUE, TRUE);
+        }
         PokenavFadeScreen(POKENAV_FADE_FROM_BLACK);
         return LT_INC_AND_PAUSE;
     case 7:

@@ -18,25 +18,6 @@ SevenIsland_EventScript_Scientist::
 	msgbox SevenIsland_Text_IslandVirtuallyUntouched, MSGBOX_NPC
 	end
 
-Text_SwordsDanceTeach::
-	.string "Not many people come out here.\p"
-	.string "If I train here, I'm convinced that\n"
-	.string "I'll get stronger and stronger.\p"
-	.string "Yep, stronger and stronger…\p"
-	.string "How would you like to learn a move\n"
-	.string "like that? It's SWORDS DANCE.$"
-
-Text_SwordsDanceDeclined::
-	.string "Well, that's fine, too.$"
-
-Text_SwordsDanceWhichMon::
-	.string "All right, pick which POKéMON\n"
-	.string "I should teach it to.$"
-
-Text_SwordsDanceTaught::
-	.string "If only we could keep getting\n"
-	.string "stronger and stronger, eh?$"
-
 SevenIsland_Text_IslandSign::
 	.string "SEVEN ISLAND\n"
 	.string "Quest Island of Infinity$"

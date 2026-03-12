@@ -207,6 +207,9 @@ extern const struct TrainerBacksprite gTrainerBacksprites[];
 
 extern const struct Trainer gTrainers[DIFFICULTY_COUNT][TRAINERS_COUNT];
 extern const struct Trainer gBattlePartners[DIFFICULTY_COUNT][PARTNER_COUNT];
+#if FRLG_INCLUDE_KANTO_TILESETS && !IS_FRLG
+extern const struct Trainer gTrainersFrlg[DIFFICULTY_COUNT][TRAINERS_COUNT_FRLG];
+#endif
 
 extern const struct TrainerClass gTrainerClasses[TRAINER_CLASS_COUNT];
 
@@ -232,6 +235,15 @@ static inline bool8 IsPartnerTrainerId(u16 trainerId)
     return FALSE;
 }
 
+#if FRLG_INCLUDE_KANTO_TILESETS && !IS_FRLG
+static inline bool8 IsFrlgTrainerId(u16 trainerId)
+{
+    return trainerId >= TRAINER_FRLG_OFFSET && trainerId < TRAINER_FRLG_OFFSET + TRAINERS_COUNT_FRLG;
+}
+#else
+#define IsFrlgTrainerId(id) FALSE
+#endif
+
 static inline u16 SanitizeTrainerId(u16 trainerId)
 {
     switch (trainerId)
@@ -241,6 +253,10 @@ static inline u16 SanitizeTrainerId(u16 trainerId)
     case TRAINER_UNION_ROOM:
         return TRAINER_NONE;
     }
+
+    // FRLG trainer IDs (>= TRAINER_FRLG_OFFSET) are valid in Emerald+Kanto builds.
+    if (IsFrlgTrainerId(trainerId))
+        return trainerId;
 
     assertf(trainerId < TRAINERS_COUNT || IsPartnerTrainerId(trainerId), "invalid trainer: %d", trainerId)
     {
@@ -255,6 +271,12 @@ static inline const struct Trainer *GetTrainerStructFromId(u16 trainerId)
     u32 sanitizedTrainerId = 0;
     if (gIsDebugBattle) return GetDebugAiTrainer();
     sanitizedTrainerId = SanitizeTrainerId(trainerId);
+
+#if FRLG_INCLUDE_KANTO_TILESETS && !IS_FRLG
+    if (IsFrlgTrainerId(sanitizedTrainerId))
+        return &gTrainersFrlg[DIFFICULTY_NORMAL][sanitizedTrainerId - TRAINER_FRLG_OFFSET];
+#endif
+
     enum DifficultyLevel difficulty = GetTrainerDifficultyLevel(sanitizedTrainerId);
 
     if (IsPartnerTrainerId(trainerId))

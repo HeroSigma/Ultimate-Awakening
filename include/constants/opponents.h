@@ -870,6 +870,15 @@
 #if IS_FRLG
 #define TRAINERS_COUNT                      TRAINERS_COUNT_FRLG
 #define MAX_TRAINERS_COUNT                  MAX_TRAINERS_COUNT_FRLG
+#elif FRLG_INCLUDE_KANTO_TILESETS
+// Emerald+Kanto build: FRLG trainer IDs are offset so they don't collide with Emerald.
+// FRLG trainer IDs = TRAINER_FRLG_OFFSET + (0..TRAINERS_COUNT_FRLG-1) = 1000..1623.
+// opponents_kanto.h redefines the symbolic TRAINER_* constants to use this offset;
+// it is NOT included here so that data/trainers_frlg.h can safely use original indices.
+// Include opponents_kanto.h only in assembler contexts (see data/event_scripts.s).
+#define TRAINER_FRLG_OFFSET                 1000
+#define TRAINERS_COUNT                      (TRAINER_FRLG_OFFSET + TRAINERS_COUNT_FRLG)
+#define MAX_TRAINERS_COUNT                  (TRAINER_FRLG_OFFSET + TRAINERS_COUNT_FRLG)
 #else
 #define TRAINERS_COUNT                      TRAINERS_COUNT_EMERALD
 #define MAX_TRAINERS_COUNT                  MAX_TRAINERS_COUNT_EMERALD

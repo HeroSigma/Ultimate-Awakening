@@ -1,5 +1,5 @@
 {
-  "id": "MAP_BIRTH_ISLAND_EXTERIOR",
+  "id": "MAP_BIRTH_ISLAND_EXTERIOR_FRLG",
   "name": "BirthIsland_Exterior",
   "layout": "LAYOUT_BIRTH_ISLAND_EXTERIOR",
   "music": "MUS_NONE",
@@ -48,7 +48,7 @@
       "x": 15,
       "y": 24,
       "elevation": 0,
-      "dest_map": "MAP_BIRTH_ISLAND_HARBOR",
+      "dest_map": "MAP_BIRTH_ISLAND_HARBOR_FRLG",
       "dest_warp_id": "0"
     }
   ],

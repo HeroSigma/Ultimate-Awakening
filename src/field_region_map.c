@@ -14,6 +14,7 @@
 #include "strings.h"
 #include "text.h"
 #include "text_window.h"
+#include "regions.h"
 #include "window.h"
 #include "constants/rgb.h"
 #include "constants/songs.h"
@@ -232,7 +233,7 @@ static void PrintTitleWindowText(void)
 {
     static const u8 FlyPromptText[] = _("{R_BUTTON} FLY");
     const u8 *region;
-    if (IS_FRLG)
+    if (IS_FRLG || GetCurrentRegion() == REGION_KANTO)
         region = gText_Kanto;
     else
         region = gText_Hoenn;

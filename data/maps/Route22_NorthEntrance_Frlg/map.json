@@ -36,28 +36,28 @@
       "x": 7,
       "y": 1,
       "elevation": 3,
-      "dest_map": "MAP_ROUTE23",
+      "dest_map": "MAP_ROUTE23_FRLG",
       "dest_warp_id": "2"
     },
     {
       "x": 6,
       "y": 10,
       "elevation": 3,
-      "dest_map": "MAP_ROUTE22",
+      "dest_map": "MAP_ROUTE22_FRLG",
       "dest_warp_id": "0"
     },
     {
       "x": 7,
       "y": 10,
       "elevation": 3,
-      "dest_map": "MAP_ROUTE22",
+      "dest_map": "MAP_ROUTE22_FRLG",
       "dest_warp_id": "0"
     },
     {
       "x": 8,
       "y": 10,
       "elevation": 3,
-      "dest_map": "MAP_ROUTE22",
+      "dest_map": "MAP_ROUTE22_FRLG",
       "dest_warp_id": "0"
     }
   ],

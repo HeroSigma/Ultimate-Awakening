@@ -80,11 +80,6 @@ LavenderTown_VolunteerPokemonHouse_EventScript_Bookshelf::
 	msgbox LavenderTown_VolunteerPokemonHouse_Text_PokemonMagazinesLineShelf, MSGBOX_SIGN
 	end
 
-LavenderTown_PokemonCenter_1F_Text_HearMrFujiNotFromAroundHere::
-	.string "I recently moved to this town.\p"
-	.string "I hear that MR. FUJI's not from\n"
-	.string "these parts originally, either.$"
-
 LavenderTown_VolunteerPokemonHouse_Text_WhereDidMrFujiGo::
 	.string "That's odd, MR. FUJI isn't here.\n"
 	.string "Where'd he go?$"

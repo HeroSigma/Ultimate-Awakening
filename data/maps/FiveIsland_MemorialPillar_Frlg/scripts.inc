@@ -81,46 +81,6 @@ FiveIsland_MemorialPillar_EventScript_MemorialLemonadeAlreadyPlaced::
 	releaseall
 	end
 
-FiveIsland_MemorialPillar_Text_MiloIntro::
-	.string "I'm the eldest of the BIRD\n"
-	.string "BROTHERS.\p"
-	.string "The best thing about birds…\n"
-	.string "It has to be the beak.$"
-
-FiveIsland_MemorialPillar_Text_MiloDefeat::
-	.string "Oh, so sharp!$"
-
-FiveIsland_MemorialPillar_Text_MiloPostBattle::
-	.string "You can fly to FOUR ISLAND from\n"
-	.string "here.$"
-
-FiveIsland_MemorialPillar_Text_ChazIntro::
-	.string "I'm the middle kid of the BIRD\n"
-	.string "BROTHERS.\p"
-	.string "The best thing about birds…\n"
-	.string "It has to be the wings.$"
-
-FiveIsland_MemorialPillar_Text_ChazDefeat::
-	.string "Flap, flap!$"
-
-FiveIsland_MemorialPillar_Text_ChazPostBattle::
-	.string "There was a really somber guy\n"
-	.string "over that way.$"
-
-FiveIsland_MemorialPillar_Text_HaroldIntro::
-	.string "I'm the youngest of the BIRD\n"
-	.string "BROTHERS.\p"
-	.string "The best thing about birds…\n"
-	.string "It has to be the down.$"
-
-FiveIsland_MemorialPillar_Text_HaroldDefeat::
-	.string "Down is so comfy…\n"
-	.string "It makes me drowsy…$"
-
-FiveIsland_MemorialPillar_Text_HaroldPostBattle::
-	.string "It fills me with happiness when\n"
-	.string "bird POKéMON beg playfully…$"
-
 FiveIsland_MemorialPillar_Text_ScrubScrub::
 	.string "Scrub, scrub…$"
 

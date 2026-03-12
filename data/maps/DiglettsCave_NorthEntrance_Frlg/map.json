@@ -43,7 +43,7 @@
       "x": 4,
       "y": 6,
       "elevation": 3,
-      "dest_map": "MAP_ROUTE2",
+      "dest_map": "MAP_ROUTE2_FRLG",
       "dest_warp_id": "3"
     }
   ],

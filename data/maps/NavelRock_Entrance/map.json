@@ -19,14 +19,14 @@
       "x": 10,
       "y": 5,
       "elevation": 3,
-      "dest_map": "MAP_NAVEL_ROCK_B1F",
+      "dest_map": "MAP_NAVEL_ROCK_B1F_FRLG",
       "dest_warp_id": "0"
     },
     {
       "x": 10,
       "y": 26,
       "elevation": 3,
-      "dest_map": "MAP_NAVEL_ROCK_EXTERIOR",
+      "dest_map": "MAP_NAVEL_ROCK_EXTERIOR_FRLG",
       "dest_warp_id": "1"
     }
   ],

@@ -30,12 +30,6 @@ CinnabarIsland_PokemonLab_Entrance_EventScript_TestingRoomSign::
 	msgbox CinnabarIsland_PokemonLab_Entrance_Text_TestingRoomSign, MSGBOX_SIGN
 	end
 
-CinnabarIsland_Gym_Text_PhotoOfBlaineAndFuji::
-	.string "It's a photo of BLAINE and\n"
-	.string "MR. FUJI.\p"
-	.string "They're standing shoulder to\n"
-	.string "shoulder with big grins.$"
-
 CinnabarIsland_PokemonLab_Entrance_Text_StudyMonsExtensively::
 	.string "We study POKéMON extensively\n"
 	.string "every day.\p"

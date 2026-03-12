@@ -92,21 +92,21 @@
       "x": 10,
       "y": 19,
       "elevation": 3,
-      "dest_map": "MAP_LAVENDER_TOWN",
+      "dest_map": "MAP_LAVENDER_TOWN_FRLG",
       "dest_warp_id": "0"
     },
     {
       "x": 11,
       "y": 18,
       "elevation": 3,
-      "dest_map": "MAP_LAVENDER_TOWN",
+      "dest_map": "MAP_LAVENDER_TOWN_FRLG",
       "dest_warp_id": "0"
     },
     {
       "x": 12,
       "y": 19,
       "elevation": 3,
-      "dest_map": "MAP_LAVENDER_TOWN",
+      "dest_map": "MAP_LAVENDER_TOWN_FRLG",
       "dest_warp_id": "0"
     },
     {

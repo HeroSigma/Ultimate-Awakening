@@ -29,16 +29,6 @@ PokemonMansion_2F_EventScript_Arnie::
 	msgbox PokemonMansion_1F_Text_ArniePostBattle, MSGBOX_AUTOCLOSE
 	end
 
-PokemonMansion_Text_PressSecretSwitch::
-	.string "A secret switch!\p"
-	.string "Press it?$"
-
-PokemonMansion_Text_WhoWouldnt::
-	.string "Who wouldn't?$"
-
-PokemonMansion_Text_NotQuiteYet::
-	.string "Not quite yet!$"
-
 PokemonMansion_1F_Text_ArnieIntro::
 	.string "I can't get out!\n"
 	.string "This old place is one big puzzle.$"

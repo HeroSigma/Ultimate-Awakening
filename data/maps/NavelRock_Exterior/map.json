@@ -1,5 +1,5 @@
 {
-  "id": "MAP_NAVEL_ROCK_EXTERIOR",
+  "id": "MAP_NAVEL_ROCK_EXTERIOR_FRLG",
   "name": "NavelRock_Exterior",
   "layout": "LAYOUT_NAVEL_ROCK_EXTERIOR",
   "music": "MUS_RG_SEVII_ROUTE",
@@ -19,7 +19,7 @@
       "x": 10,
       "y": 18,
       "elevation": 0,
-      "dest_map": "MAP_NAVEL_ROCK_HARBOR",
+      "dest_map": "MAP_NAVEL_ROCK_HARBOR_FRLG",
       "dest_warp_id": "0"
     },
     {
